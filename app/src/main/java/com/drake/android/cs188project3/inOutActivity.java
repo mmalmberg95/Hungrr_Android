@@ -16,7 +16,8 @@ public class inOutActivity extends AppCompatActivity {
     private ImageButton optOne;
     private ImageButton optTwo;
     private ArrayList<Integer> options;
-    //private int i;
+    private int one = 0;
+    private int two = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,15 +29,16 @@ public class inOutActivity extends AppCompatActivity {
         options = new ArrayList<Integer>();
 
 
-       // i = 0;
-
         optOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 options.add(1);
+                one = one + 1;
+                Log.d("one","total: " + one);
                 Intent intent = getIntent();
                 finish();
                 startActivity(intent);
+
             }
         });
 
@@ -44,6 +46,8 @@ public class inOutActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 options.add(2);
+                two += 1;
+                Log.d("two","total: " + two);
                 Intent intent = getIntent();
                 finish();
                 startActivity(intent);
