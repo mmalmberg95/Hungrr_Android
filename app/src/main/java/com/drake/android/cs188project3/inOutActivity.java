@@ -1,6 +1,7 @@
 package com.drake.android.cs188project3;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,9 +16,10 @@ import static java.util.stream.IntStream.range;
 public class inOutActivity extends AppCompatActivity {
     private ImageButton optOne;
     private ImageButton optTwo;
-    private ArrayList<Integer> options;
-    private int one = 0;
-    private int two = 0;
+    private String[] options = {"one", "two", "three", "four"};
+    private ArrayList<Integer> results;
+    private int i;
+    private String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +28,32 @@ public class inOutActivity extends AppCompatActivity {
 
         optOne = (ImageButton) findViewById(R.id.optOne);
         optTwo = (ImageButton) findViewById(R.id.optTwo);
-        options = new ArrayList<Integer>();
+        results = new ArrayList<Integer>();
 
+        Intent myIntent = getIntent();
+        int update = myIntent.getIntExtra("update", 0);
+        int one = myIntent.getIntExtra("one", 0);
+        int two = myIntent.getIntExtra("two", 0);
+
+        i = update;
+
+        int Img1 = getResources().getIdentifier(options[i], "drawable", getPackageName());
+        optOne.setImageResource(Img1);
+
+        i++;
+
+        int Img2 = getResources().getIdentifier(options[i], "drawable", getPackageName());
+        optTwo.setImageResource(Img2);
+
+
+        final Intent intent = getIntent();
+        intent.putExtra("update", i);
 
         optOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                options.add(1);
-                one = one + 1;
-                Log.d("one","total: " + one);
-                Intent intent = getIntent();
+                results.add(1);
+                Log.d("one","total: " + i);
                 finish();
                 startActivity(intent);
 
@@ -45,10 +63,8 @@ public class inOutActivity extends AppCompatActivity {
         optTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                options.add(2);
-                two += 1;
-                Log.d("two","total: " + two);
-                Intent intent = getIntent();
+                results.add(2);
+                Log.d("two","total: " + i);
                 finish();
                 startActivity(intent);
             }

@@ -32,23 +32,23 @@ public class MainActivity extends AppCompatActivity {
         introTxt.startAnimation(two);
         timerTxt.startAnimation(three);
 
-        final Intent i = new Intent(this,inOutActivity.class);
-        Thread timer = new Thread(){
+        final Intent i = new Intent(this, inOutActivity.class);
+        Thread timer = new Thread() {
             public void run() {
-                try{
+                try {
                     sleep(8000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
-                finally {
+                } finally {
                     startActivity(i);
                     finish();
                 }
             }
         };
-                timer.start();
+        timer.start();
 
     }
-
-
 }
+
+
+
