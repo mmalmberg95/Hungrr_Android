@@ -32,18 +32,19 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try{
                     sleep(5000);
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
-                finally {
+                } finally {
                     startActivity(i);
                     finish();
                 }
             }
         };
-                timer.start();
+        timer.start();
 
     }
-
-
 }
+
+
+
