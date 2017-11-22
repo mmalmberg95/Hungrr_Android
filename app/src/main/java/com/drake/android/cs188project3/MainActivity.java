@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView welcomeTxt;
     private TextView introTxt;
-    private TextView timerTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,21 +21,18 @@ public class MainActivity extends AppCompatActivity {
 
         welcomeTxt = (TextView) findViewById(R.id.welcomeTxt);
         introTxt = (TextView) findViewById(R.id.introTxt);
-        timerTxt = (TextView) findViewById(R.id.timerTxt);
-
 
         Animation one = AnimationUtils.loadAnimation(this, R.anim.first);
         Animation two = AnimationUtils.loadAnimation(this, R.anim.second);
-        Animation three = AnimationUtils.loadAnimation(this, R.anim.third);
         welcomeTxt.startAnimation(one);
         introTxt.startAnimation(two);
-        timerTxt.startAnimation(three);
 
-        final Intent i = new Intent(this, inOutActivity.class);
-        Thread timer = new Thread() {
+        final Intent i = new Intent(this,CountdownActivity.class);
+        Thread timer = new Thread(){
             public void run() {
-                try {
-                    sleep(8000);
+                try{
+                    sleep(5000);
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {

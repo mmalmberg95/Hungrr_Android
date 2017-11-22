@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.drake.android.cs188project3.CountdownActivity">
+
+
+    <!--<com.airbnb.lottie.LottieAnimationView-->
+    <!--android:id = "@+id/countdown"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:lottie_fileName="countdown.json"-->
+    <!--app:lottie_loop="true"-->
+    <!--app:lottie_autoPlay="true"/>-->
+
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper1"
+        android:layout_width="378dp"
+        android:layout_height="562dp"
+        android:autoStart="true"
+        android:flipInterval="1000"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="2dp">
+
+        <TextView
+            android:id="@+id/three_textview"
+            android:layout_width="378dp"
+            android:layout_height="562dp"
+            android:text="3"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="64sp"
+            android:textColor="#ffffff"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="189dp" />
+
+        <TextView
+            android:id="@+id/two_textview"
+            android:layout_width="378dp"
+            android:layout_height="562dp"
+            android:text="2"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="64sp"
+            android:textColor="#ffffff"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="189dp" />
+
+        <TextView
+            android:id="@+id/one_textview"
+            android:layout_width="378dp"
+            android:layout_height="562dp"
+            android:text="1"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="64sp"
+            android:textColor="#ffffff"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="189dp" />
+
+        <TextView
+            android:id="@+id/go_textview"
+            android:layout_width="378dp"
+            android:layout_height="562dp"
+            android:text="GO!"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="64sp"
+            android:textColor="#ffffff"
+            tools:layout_editor_absoluteX="165dp"
+            tools:layout_editor_absoluteY="189dp" />
+
+
+    </ViewFlipper>
+
+</android.support.constraint.ConstraintLayout>
