@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.drake.android.cs188project3.inOutActivity">
+    tools:context="com.drake.android.cs188project3.foodChoiceActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,24 +26,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <ImageButton
-            android:id="@+id/optOne"
+            android:id="@+id/foodOne"
             android:layout_width="100dp"
             android:layout_height="100dp"
+            android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-
+            android:layout_marginStart="33dp"
+            app:srcCompat="@drawable/one"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="262dp"
-            android:layout_marginEnd="33dp"
-            android:layout_toStartOf="@+id/orText"/>
-        <!--app:srcCompat="@drawable/one"-->
+            tools:layout_editor_absoluteY="262dp" />
 
         <ImageButton
-            android:id="@+id/optTwo"
+            android:id="@+id/foodTwo"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_alignTop="@+id/optOne"
+            android:layout_alignTop="@+id/foodOne"
             android:layout_marginStart="34dp"
             android:layout_toEndOf="@+id/orText"
             android:contentDescription="TODO"
@@ -51,5 +49,6 @@
             tools:layout_editor_absoluteX="299dp"
             tools:layout_editor_absoluteY="262dp" />
     </RelativeLayout>
+
 
 </android.support.constraint.ConstraintLayout>

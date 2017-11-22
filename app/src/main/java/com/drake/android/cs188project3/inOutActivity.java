@@ -8,18 +8,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
-import static java.util.stream.IntStream.range;
 
 public class inOutActivity extends AppCompatActivity {
     private ImageButton optOne;
     private ImageButton optTwo;
-    private String[] options = {"one", "two", "three", "four"};
+    private String[] options = {"one.jpg", "two.png", "three.png", "four.png", "five.jpg", "six.jpg"};
     private ArrayList<Integer> results;
-    private int i;
-    private String name;
+    private int i;;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +29,9 @@ public class inOutActivity extends AppCompatActivity {
 
         Intent myIntent = getIntent();
         int update = myIntent.getIntExtra("update", 0);
-        int one = myIntent.getIntExtra("one", 0);
-        int two = myIntent.getIntExtra("two", 0);
 
         i = update;
+
 
         int Img1 = getResources().getIdentifier(options[i], "drawable", getPackageName());
         optOne.setImageResource(Img1);
@@ -45,9 +41,12 @@ public class inOutActivity extends AppCompatActivity {
         int Img2 = getResources().getIdentifier(options[i], "drawable", getPackageName());
         optTwo.setImageResource(Img2);
 
+        i++;
 
         final Intent intent = getIntent();
         intent.putExtra("update", i);
+
+        final Intent j = new Intent(this, foodChoiceActivity.class);
 
         optOne.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +54,11 @@ public class inOutActivity extends AppCompatActivity {
                 results.add(1);
                 Log.d("one","total: " + i);
                 finish();
-                startActivity(intent);
+                if (i == 6) {
+
+                    startActivity(j);
+                }
+                else{startActivity(intent);}
 
             }
         });
@@ -66,7 +69,10 @@ public class inOutActivity extends AppCompatActivity {
                 results.add(2);
                 Log.d("two","total: " + i);
                 finish();
-                startActivity(intent);
+                if (i == 6) {
+                    startActivity(j);
+                }
+                else{startActivity(intent);}
             }
         });
 
