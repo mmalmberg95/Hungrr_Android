@@ -17,9 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".inOutActivity" />
-        <activity android:name=".foodChoiceActivity"></activity>
-        <activity android:name=".CountdownActivity"></activity>
-
+        <activity android:name=".foodChoiceActivity" />
+        <activity android:name=".CountdownActivity" />
+        <activity android:name=".finalPage"></activity>
     </application>
 
 </manifest>
