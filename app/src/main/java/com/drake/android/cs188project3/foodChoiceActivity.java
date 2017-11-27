@@ -1,5 +1,6 @@
 package com.drake.android.cs188project3;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +22,9 @@ public class foodChoiceActivity extends AppCompatActivity {
         foodOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                //Someone needs to fill in this code, I only put what this intent here to test the final page and see that it works. It does.
+                Intent intent = new Intent(getBaseContext(),finalPage.class);
+                startActivity(intent);
 
             }
         });
