@@ -1,0 +1,123 @@
+Food,Category,Sweet or Savory,Pricey or Casual,Good or Bad
+Lo Mein,PanAsian,Savory,Casual,Bad
+Mongolian Beef,PanAsian,Savory,Casual,Bad
+Egg Drop Soup,PanAsian,Savory,Casual/Fancy,Good 
+Fried Rice,PanAsian,Savory,Casual,Bad
+Beef and Broccoli,PanAsian,Savory,Casual,Good
+Cashew Chicken,PanAsian,Savory,Casual,Good
+Egg Rolls,PanAsian,Savory,Casual,Bad
+Crab Rangoons,PanAsian,Savory,Casual,Bad
+Potstickers,PanAsian,Savory,Casual,Bad
+Stir Fry,PanAsian,Savory,Casual,Bad
+Kung Pao Chicken,PanAsian,Savory,Casual,Bad
+Bao Buns,PanAsian,Savory,Casual/Fancy,Good
+Wonton Soup,PanAsian,Savory,Casual,Good
+Sweet and Sour Chicken,PanAsian,Savory,Casual,Bad
+Orange Chicken,PanAsian,Savory,Casual,Bad
+Fajitas,Mexican,Savory,Casual/Fancy,Good
+Carne Asada,Mexican,Savory,Fancy,Bad/Good
+Quesadilla,Mexican,Savory,Casual,Bad
+Red Rice,Mexican,Savory,Casual,Good
+Fish Tacos,Mexican/Seafood,Savory,Casual/Fancy,Good
+Beef Tacos,Mexican,Savory,Casual/Fancy,Good/Bad
+Enchiladas,Mexican,Savory,Casual,Bad
+Burritos,Mexican,Savory,Casual,Bad
+Chicken and Tortilla Soup,Mexican,Savory,Casual,Good
+Guacamole,Mexican,Savory,Casual,Good
+Chimichanga,Mexican,Savory,Casual,Bad
+Taco Salad,Mexican,Savory,Casual,Good
+Chips and Salsa,Mexican,Savory,Casual,Bad
+Refried Beans,Mexican,Savory,Casual,Bad
+Spaghetti and Meatballs,Italian,Savory,Casual/Fancy,Good
+Chicken Parmesan,Italian,Savory,Fancy,Good
+Ravioli ,Italian,Savory,Casual/Fancy,Bad
+Cheese Gnocchi,Italian,Savory,Fancy,Good
+Chicken Vesuvio,Italian,Savory,Fancy,Good
+Bruschetta,Italian,Savory,Fancy,Bad/Good
+Lasagna,Italian,Savory,Casual/Fancy,Good
+Tuscan Chicken,Italian,Savory,Fancy,Good
+Garlic Bread,Italian,Savory,Casual,Bad
+Stuffed Pasta Shells,Italian,Savory,Fancy,Bad
+Chicken Marsala,Italian,Savory,Fancy,Good
+Chicken Carbonara ,Italian,Savory,Fancy,Good
+Calzones,Italian,Savory,Casual,Bad
+Focaccia Bread,Italian,Savory,Casual,Bad
+Eggplant Parmesan,Italian,Savory,Fancy,Good
+Burger,American,Savory,Casual,Bad 
+Fries,American,Savory,Casual,Bad
+Onion Rings,American,Savory,Casual,Bad
+Baked Chicken,American,Savory,Casual/Fancy,Good/Bad
+Hot Dogs,American,Savory,Casual,Bad
+Grilled Cheese,American,Savory,Casual,Bad
+Hot Wings,American,Savory,Casual,Bad
+Steak,American,Savory,Fancy,Bad
+BBQ Ribs,American,Savory,Fancy,Bad
+Fried Chicken,American,Savory,Casual/Fancy,Bad
+Tom Kha,PanAsian,Savory,Casual/Fancy,Bad
+Rice with Peanut Sauce,PanAsian,Savory,Casual/Fancy,Bad
+Yum Neau,PanAsian,Savory,Casual/Fancy,Bad
+Sweet Chili Noodles,PanAsian,Savory,Casual/Fancy,Bad
+Salmon Cho Chee,PanAsian,Savory,Casual/Fancy,Good
+Stir Fry,PanAsian,Savory,Casual/Fancy,Bad
+Peanut Curry,PanAsian,Savory,Casual/Fancy,Bad
+Red Curry,PanAsian,Savory,Casual/Fancy,Bad
+Duck With Garlic Sauce,PanAsian,Savory,Casual/Fancy,Bad
+Udon Kee Mao,PanAsian,Savory,Casual/Fancy,Bad
+Fried Rice,PanAsian,Savory,Casual/Fancy,Bad
+Thai Chicken and Broccoli,PanAsian,Savory,Casual/Fancy,Good
+Duck Pad Thai,PanAsian,Savory,Casual/Fancy,Bad
+Fried Tofu,PanAsian,Savory,Casual/Fancy,Bad
+Lemongrass Chicken,PanAsian,Savory,Casual/Fancy,Good
+Grilled Salmon,Seafood,Savory,Fancy,Good
+Scallops ,Seafood,Savory,Fancy,Good
+Lobster,Seafood,Savory,Fancy,Good
+Fried Tilapia,Seafood,Savory,Casual,Bad
+Crab Legs,Seafood,Savory,Fancy,Good
+Coconut Shrimp,Seafood,Savory,Fancy,Bad
+Seafood Pasta,Seafood,Savory,Fancy,Good/Bad
+Seafood Stew,Seafood,Savory,Fancy,Good/Bad
+Shrimp Cocktail,Seafood,Savory,Fancy,Good
+Crab Cakes,Seafood,Savory,Fancy,Good/Bad
+Paella,Seafood,Savory,Fancy,Good
+Crab Rangoons,Seafood/PanAsian,Savory,Casual,Bad
+Mussels,Seafood,Savory,Fancy,Good
+Rockefeller Oysters,Seafood,Savory,Fancy,Good
+Red Snapper,Seafood,Savory,Fancy,Good
+Cheesy Grits,Southern American,Savory,Casual,Bad
+Fried Chicken,Southern American,Savory,Casual/Fancy,Bad
+Biscuits and Gravy,Southern American,Savory,Casual,Bad
+Chicken Fried Steak,Southern American,Savory,Casual/Fancy,Bad
+Potato Salad,Southern American,Savory,Casual,Bad
+Chicken and Dumplings,Southern American,Savory,Casual,Bad
+Southern Fish Fry,Southern American,Savory,Casual,Bad
+Cornbread,Southern American,Savory,Casual,Bad
+Shrimp and Grits,Southern American,Savory,Casual/Fancy,Bad
+Mushroom Pizza,Pizza,Savory,Casual,Bad
+Pepperoni Pizza,Pizza,Savory,Casual,Bad
+Sausage Pizza,Pizza,Savory,Casual,Bad
+Cheese Pizza,Pizza,Savory,Casual,Bad
+Pineapple Pizza,Pizza,Savory,Casual,Bad
+Deep Dish Pizza,Pizza,Savory,Casual,Bad
+Margherita Pizza,Pizza,Savory,Casual/Fancy,Bad
+Greek Pizza,Pizza,Savory,Casual/Fancy,Bad
+White Pizza,Pizza,Savory,Casual/Fancy,Bad
+Neopolitan Pizza,Pizza,Savory,Casual/Fancy,Bad
+Hawaiian Pizza,Pizza,Savory,Casual,Bad
+BBQ Chicken and Onion Pizza,Pizza,Savory,Casual,Bad
+Artichoke and Spinach Pizza,Pizza,Savory,Fancy,Bad
+Bacon Pizza,Pizza,Savory,Casual/Fancy,Bad
+Lamb Gyro,Greek,Savory,Casual,Good/Bad
+Chicken Gyro,Greek,Savory,Casual,Good/Bad
+Lamb Kabob,Greek,Savory,Fancy,Good
+Hummus,Greek,Savory,Casual,Good
+Falafel Sandwich,Greek,Savory,Casual,Good
+Dolmathes (Stuffed Grape Leaves),Greek,Savory,Casual/Fancy,Good
+Greek Salad,Greek,Savory,Casual/Fancy,Good
+Tiropites (Cheese Pastry),Greek,Savory,Casual,Bad
+Tzatziki with Pita Bread,Greek,Savory,Casual,Bad
+Spanakopita (Spinach Pastry),Greek,Savory,Casual,Bad
+Pork Souvlaki (Grilled Pork Skewers),Greek,Savory,Casual/Fancy,Good
+Stuffed Tomatoes,Greek,Savory,Casual/Fancy,Good
+Roasted Stuffed Bell Peppers,Greek,Savory,Casual/Fancy,Good
+Grilled Lamb Chops,Greek,Savory,Fancy,Good/Bad
+Mediterranean Roasted Vegetables,Greek,Savory,Casual/Fancy,Good
