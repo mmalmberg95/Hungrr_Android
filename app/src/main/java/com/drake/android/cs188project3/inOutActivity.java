@@ -1,6 +1,8 @@
 package com.drake.android.cs188project3;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -65,6 +67,8 @@ public class inOutActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        assignImages(foodData);
+
 
         Intent myIntent = getIntent();
         int update = myIntent.getIntExtra("update", 0);
@@ -120,45 +124,46 @@ public class inOutActivity extends AppCompatActivity {
     }
 
     ArrayList<Food> filter (ArrayList<Food> list, int attr, String filter){
+        ArrayList<Food> available = new ArrayList<>();
         if (attr == 1){
             for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getHealth() != filter){
-                    list.remove(i);
+                if (list.get(i).getHealth() == filter){
+                    available.add(list.get(i));
                 }
             }
-            return list;
+            return available;
         }
 
         else if(attr == 2){
             for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getPrice() != filter){
-                    list.remove(i);
+                if (list.get(i).getPrice() == filter){
+                    available.add(list.get(i));
                 }
             }
-            return list;
+            return available;
         }
 
         else if(attr == 3) {
             for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getTaste() != filter){
-                    list.remove(i);
+                if (list.get(i).getTaste() == filter){
+                    available.add(list.get(i));
                 }
             }
-            return list;
+            return available;
         }
 
         else{
             for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getType() != filter){
-                    list.remove(i);
+                if (list.get(i).getType() == filter){
+                    available.add(list.get(i));
                 }
             }
-            return list;
+            return available;
         }
     }
 
     String setup (int n){
-        String choice = "bleh";
+        String choice = "null";
         if ( i == 1){
             choice = "Good";
         }
@@ -181,4 +186,15 @@ public class inOutActivity extends AppCompatActivity {
         return choice;
     }
 
+    ArrayList<Food> assignImages (ArrayList<Food> list){
+        for (int i = 0; i < list.size(); i++) {
+            int drawableId = getResources().getIdentifier(list.get(i).getName(), "drawable", getPackageName());
+            Drawable image = getResources().getDrawable(drawableId);
+            Bitmap newImage = ((BitmapDrawable) image).getBitmap();
+
+            list.get(i).setFoodImage(newImage);
+        }
+
+        return list;
+    }
 }

@@ -1,5 +1,6 @@
 package com.drake.android.cs188project3;
 
+import android.graphics.Bitmap;
 import android.media.Image;
 
 /**
@@ -7,21 +8,13 @@ import android.media.Image;
  */
 
 public class Food {
-    private Image foodImage;
+    private Bitmap foodImage;
     private String name;
     private String type;
     private String health;
     private String price;
     private String taste;
 
-
-    public Image getFoodImage() {
-        return foodImage;
-    }
-
-    public void setFoodImage(Image foodImage) {
-        this.foodImage = foodImage;
-    }
 
     public String getName() {
         return name;
@@ -61,6 +54,14 @@ public class Food {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public Bitmap getFoodImage() {
+        return foodImage;
+    }
+
+    public void setFoodImage(Bitmap foodImage) {
+        this.foodImage = foodImage;
     }
 }
 
