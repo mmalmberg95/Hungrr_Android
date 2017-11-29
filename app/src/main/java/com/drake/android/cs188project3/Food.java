@@ -10,7 +10,7 @@ import android.media.Image;
 public class Food {
     private Bitmap foodImage;
     private String name;
-    private String type;
+    private Integer type;
     private String health;
     private String price;
     private String taste;
@@ -48,20 +48,20 @@ public class Food {
         this.taste = taste;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public Bitmap getFoodImage() {
         return foodImage;
     }
 
     public void setFoodImage(Bitmap foodImage) {
         this.foodImage = foodImage;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 }
 

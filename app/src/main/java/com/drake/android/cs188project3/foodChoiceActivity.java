@@ -22,22 +22,26 @@ public class foodChoiceActivity extends AppCompatActivity {
 
     private ImageButton foodOne;
     private ImageButton foodTwo;
+    Food Opt1 = new Food();
+    Food Opt2 = new Food();
     private Integer round;
     private Integer i;
 
     //Put all in Realm
     private ArrayList<Food> foodData;
+    private ArrayList<Food> lastData;
     private ArrayList<Integer> results;
     private ArrayList<Integer> previous;
 
-//    American = 0
-//    PanAsian = 1
-//    Greek = 2
-//    Italian = 3
-//    Southern = 4
-//    Mexican = 5
+
+//    PanAsian = 0
+//    Mexican = 1
+//    Italian = 2
+//    American = 3
+//    Seafood = 4
+//    Southern = 5
 //    Pizza = 6
-//    Seafood = 7
+//    Greek = 7
 
 
     @Override
@@ -48,66 +52,80 @@ public class foodChoiceActivity extends AppCompatActivity {
         foodOne = (ImageButton) findViewById(R.id.foodOne);
         foodTwo = (ImageButton) findViewById(R.id.foodTwo);
 
+
+
         //gets the number round of the game
         Intent myIntent = getIntent();
         round = myIntent.getIntExtra("round", 1);
-        String last = myIntent.getStringExtra("last");
+        Integer type = myIntent.getIntExtra("type", 8);
 
-//        if (round == 1){
-            Food Opt1 = pull_random(foodData);
-            Food Opt2 = pull_random(foodData);
+
+
+        //First choice in game
+        if (round == 1){
+            Opt1 = pull_random(foodData);
+            Opt2 = pull_random(foodData);
 
             checkSame(Opt1, Opt2, foodData);
 
             while (i < 6){
                 results.add(0);
             }
-            pictureView(Opt1, i, foodOne);
-            pictureView(Opt2, i, foodTwo);
-//        }
-//        else if(round == 10){
-//
-//        }
+            pictureView(Opt1, foodOne);
+            pictureView(Opt2, foodTwo);
+        }
 
-//         else{
-//          Food Opt1 = pull_random(lastData);
-//            Food Opt2 = pull_random(foodData);
-//            checkSame(Opt1, Opt2, foodData);
-//        pictureView(Opt1, i, foodOne);
-//        pictureView(Opt2, i, foodTwo);
+        //last choice in game
+        else if(round == 10){
+            type = getMax(results);
+            Opt1 = pull_last(foodData, type);
+            type = getMax(results);
+            Opt2 = pull_last(foodData, type);
 
-//        }
+            pictureView(Opt1, foodOne);
+            pictureView(Opt2, foodTwo);
 
+            previous.clear();
+            results.clear();
+        }
 
+        //Every Round
+         else{
+            Opt1 = pull_last(foodData, type);
+            Opt2 = pull_random(foodData);
 
+            checkSame(Opt1, Opt2, foodData);
+            checkType(type, previous);
 
-        final Intent intent = getIntent();
+            pictureView(Opt1, foodOne);
+            pictureView(Opt2, foodTwo);
 
+        }
 
-
-
-
-
-
-
-
-
-
+        //final Intent next = new Intent(this, lastPage.class);
 
         foodOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-       //         Integer type = foodData.get(i).getType();
+                Integer type = Opt1.getType();
                 final Intent intent = getIntent();
-                intent.putExtra("last", type);
+                intent.putExtra("type", type);
 
                 int update = results.get(type);
                 update ++;
-                results.set(i, update);
+                results.set(type, update);
 
-                round ++;
-                startActivity(intent);
+                int other = Opt2.getType();
+                previous.add(other);
+
+                if (round == 10){
+                    //startActivity(next);
+                }
+                else{
+                    round ++;
+                    startActivity(intent);
+                }
             }
         });
 
@@ -115,13 +133,17 @@ public class foodChoiceActivity extends AppCompatActivity {
         foodTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //         Integer type = foodData.get(i).getType();
+
+                Integer type = foodData.get(i).getType();
                 final Intent intent = getIntent();
-                intent.putExtra("last", type);
+                intent.putExtra("type", type);
 
                 int update = results.get(type);
                 update ++;
-                results.set(i, update);
+                results.set(type, update);
+
+                int other = Opt1.getType();
+                previous.add(other);
 
                 round++;
                 startActivity(intent);
@@ -130,12 +152,12 @@ public class foodChoiceActivity extends AppCompatActivity {
     }
 
 
-    void pictureView (Food item, int i, ImageButton food) {
+
+    void pictureView (Food item,  ImageButton food) {
         //int id = getResources().getIdentifier(list.get(i).getName(), "drawable", getPackageName());
         Bitmap Img = item.getFoodImage();
         food.setImageBitmap(Img);
         //include textview assignment
-
     }
 
     Food pull_random(ArrayList<Food> list){
@@ -143,18 +165,28 @@ public class foodChoiceActivity extends AppCompatActivity {
         Random rand = new Random();
         int index = rand.nextInt(list.size());
 
-        Food thing = list.get(index);
+        Food item = list.get(index);
 
-        return thing;
+        return item;
     }
 
-//    ArrayList<Food> findArray (int type){
-//        if (type == 0){
-//            return americanList;
-//        }
-//
-//        return foodData;
-//    }
+    Food pull_last (ArrayList<Food> all, int type){
+        ArrayList<Food> last = new ArrayList<>();
+        for (i=0; i < all.size(); i++){
+            if (all.get(i).getType() == type){
+                last.add(all.get(i));
+            }
+        }
+
+        Random rand = new Random();
+        int index = rand.nextInt(last.size());
+
+        Food option = last.get(index);
+
+        last.clear();
+
+        return option;
+    }
 
     Food checkSame (Food one, Food two, ArrayList<Food> data) {
         while (one.getType() == two.getType()){
@@ -164,22 +196,34 @@ public class foodChoiceActivity extends AppCompatActivity {
     }
 
     Integer checkType(Integer type, ArrayList<Integer> used){
+        if (used.size() == 8){
+            return type;
+        }
         for (i = 0; i < used.size(); i++){
             if (type == used.get(i)){
-//                type = Rand
-                checkType(type, used);
+                Random rand = new Random();
+                type = rand.nextInt(used.size());
+                i = 0;
             }
         }
         return type;
     }
 
-//    Food pullLast (Integer type, ArrayList<Food> data){
-//
-//    }
+    Integer getMax (ArrayList<Integer> results){
+        int max = 0;
+        int index = 0;
+        for (i=0; i < results.size(); i++ ){
+            if (results.get(i) >= max ){
+                max = results.get(i);
+                index = i;
+            }
+        }
+        results.remove(index);
+        return index;
+    }
 
 
 //    currently: One Array: Pull random to start, loop to find next list
-//    possibly?: 8 Arrays, Random Int to start, pull straight from array for next
 
 //    Questions? Which version?
 //                Random Function?

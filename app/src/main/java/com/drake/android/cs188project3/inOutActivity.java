@@ -52,7 +52,7 @@ public class inOutActivity extends AppCompatActivity {
 
                 Food data = new Food();
                 data.setName(info[0]);
-                data.setType(info[1]);
+                data.setType(Integer.parseInt(info[1]));
                 data.setTaste((info[2]));
                 data.setPrice(info[3]);
                 data.setHealth(info[4]);
@@ -151,15 +151,7 @@ public class inOutActivity extends AppCompatActivity {
             }
             return available;
         }
-
-        else{
-            for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getType() == filter){
-                    available.add(list.get(i));
-                }
-            }
-            return available;
-        }
+        return available;
     }
 
     String setup (int n){
