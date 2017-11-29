@@ -9,6 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/creamBG"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
@@ -34,9 +35,10 @@
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:fontFamily="@font/ubuntu_light"
             android:text="The results are in..."
             android:textAlignment="center"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/orange"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -47,18 +49,19 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/resultText"
             android:layout_marginTop="31dp"
+            android:fontFamily="@font/ubuntu_light"
             android:text="Cuisine Choice"
             android:textAlignment="center"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/orange"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <ListView
+            android:id="@+id/nearByList"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_above="@+id/tryAgain"
-            android:layout_alignParentStart="true"
-            android:id="@+id/nearByList" />
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:id="@+id/nearYou"
@@ -66,9 +69,10 @@
             android:layout_height="50dp"
             android:layout_above="@+id/nearByList"
             android:layout_centerHorizontal="true"
+            android:fontFamily="@font/ubuntu_light"
             android:text="Nearest You"
             android:textAlignment="center"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/orange"
             android:textSize="24sp"
             android:textStyle="bold" />
 

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/creamBG"
     tools:context="com.drake.android.cs188project3.inOutActivity">
 
     <RelativeLayout
@@ -14,12 +15,13 @@
             android:id="@+id/orText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/optTwo"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_marginBottom="87dp"
             android:text="OR"
             android:textAlignment="center"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="36sp"
+            android:textColor="@color/orange"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -29,26 +31,36 @@
 
         <ImageButton
             android:id="@+id/optOne"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerVertical="true"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_below="@+id/countdownAnim"
+            android:layout_marginEnd="13dp"
+            android:layout_marginTop="33dp"
+            android:layout_toStartOf="@+id/orText"
             tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="262dp"
-            android:layout_marginEnd="33dp"
-            android:layout_toStartOf="@+id/orText"/>
+            tools:layout_editor_absoluteY="262dp" />
         <!--app:srcCompat="@drawable/one"-->
 
         <ImageButton
             android:id="@+id/optTwo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
             android:layout_alignTop="@+id/optOne"
-            android:layout_marginStart="34dp"
+            android:layout_marginStart="11dp"
             android:layout_toEndOf="@+id/orText"
             android:contentDescription="TODO"
             app:srcCompat="@drawable/two"
             tools:layout_editor_absoluteX="299dp"
             tools:layout_editor_absoluteY="262dp" />
+
+        <ImageView
+            android:id="@+id/countdownAnim"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            app:srcCompat="@mipmap/ic_launcher_round" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
