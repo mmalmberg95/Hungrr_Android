@@ -53,7 +53,6 @@ public class foodChoiceActivity extends AppCompatActivity {
         foodTwo = (ImageButton) findViewById(R.id.foodTwo);
 
 
-
         //gets the number round of the game
         Intent myIntent = getIntent();
         round = myIntent.getIntExtra("round", 1);
@@ -145,8 +144,13 @@ public class foodChoiceActivity extends AppCompatActivity {
                 int other = Opt1.getType();
                 previous.add(other);
 
-                round++;
-                startActivity(intent);
+                if (round == 10){
+                    //startActivity(next);
+                }
+                else{
+                    round ++;
+                    startActivity(intent);
+                }
             }
         });
     }
