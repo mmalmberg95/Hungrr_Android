@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="376dp"
+        android:layout_height="554dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="5dp">
+
+
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:id="@+id/restaurantImage"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            app:srcCompat="@mipmap/ic_launcher" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/phoneNumber"/>
+            android:id="@+id/name"
+            android:layout_width="300dp"
+            android:layout_height="25dp"
+            android:layout_alignStart="@+id/restaurantImage"
+            android:layout_below="@+id/restaurantImage"
+            android:text="Name" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/address"/>
+            android:id="@+id/address"
+            android:layout_width="300dp"
+            android:layout_height="25dp"
+            android:layout_alignStart="@+id/name"
+            android:layout_below="@+id/name"
+            android:text="Address" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/name"/>
+            android:id="@+id/phoneNumber"
+            android:layout_width="300dp"
+            android:layout_height="25dp"
+            android:layout_alignStart="@+id/address"
+            android:layout_below="@+id/address"
+            android:text="Number" />
+
 
     </RelativeLayout>
-
 </android.support.constraint.ConstraintLayout>

@@ -66,12 +66,21 @@ private ArrayList<Restaurant> restaurantList;
         public View getView(int i, View view, ViewGroup viewGroup) {
             view = getLayoutInflater().inflate(R.layout.restaurant_list,null);
 
+            final ImageView image = (ImageView) findViewById(R.id.restaurantImage);
+            final TextView name = (TextView) findViewById(R.id.name);
+            final TextView address = (TextView) findViewById(R.id.address);
+            final TextView phoneNumber = (TextView) findViewById(R.id.phoneNumber);
+
+//            name.setText("Test");
+//            address.setText("Test Place");
+//            address.setText("Test Number");
+
             return view;
         }
     }
 
         //public ArrayList<EatData>
-    void checkValidity(int eventID, int maxDistance)
+    void checkDistance(int eventID, int maxDistance)
     {
         Location user =  new Location("user");
         Location event = new Location("event");
@@ -82,77 +91,15 @@ private ArrayList<Restaurant> restaurantList;
 
 
 
-        //empties arrays
+        event.setLatitude(restaurantList.get(eventID).getLatitude());
+        event.setLongitude(restaurantList.get(eventID).getLongitude());
 
-            event.setLatitude(restaurantList.get(eventID).getLatitude());
-            event.setLongitude(restaurantList.get(eventID).getLongitude());
-
-            double distance = user.distanceTo(event); //meters to miles
+        double distance = user.distanceTo(event); //meters to miles
 //                /1609.39;
 
 //            if (distance <= maxDistance) {
-//                displayEatList.add(eatList.get(eventID));
-//
-//            }
-//
-//            //Checks to see if the entire array has been scanned
-//            if (eventID < (eatList.size() - 1)) {
-//                checkValidity(eventID + 1, maxDistance);
-//            }
-//        }
-//
-//        else if(whichList == 2) {
-//            event.setLatitude(drinkList.get(eventID).getLatitude());
-//            event.setLongitude(drinkList.get(eventID).getLongitude());
-//        }
-//
-//        else {
-//            event.setLatitude(doList.get(eventID).getLatitude());
-//            event.setLongitude(doList.get(eventID).getLongitude());}
-//
-//
-//        //finds and compares distance
-//
-//
-//        //Adds to array if applicable
-//        if(whichList == 1)
-//        {
-//
-//        }
-//
-//        else if(whichList == 2)
-//        {
-//            double distance = user.distanceTo(event); //meters to miles
-////                /1609.39;
-//            if(distance <= maxDistance)
-//            {
-//                displayDrinkList.add(drinkList.get(eventID));
-//            }
-//
-//            //Checks to see if the entire array has been scanned
-//            if(eventID < (drinkList.size() - 1))
-//            {
-//                checkValidity(eventID + 1, maxDistance);
-//            }
-//        }
-//
-//        else
-//        {
-//            double distance = user.distanceTo(event); //meters to miles
-////                /1609.39;
-//            if((distance <= maxDistance) && (checkDate(eventID) == true))
-//            {
-//                displayDoList.add(doList.get(eventID));
-//            }
-//
-//            //Checks to see if the entire array has been scanned
-//            if(eventID < (doList.size() - 1))
-//            {
-//                checkValidity(eventID + 1, maxDistance);
-//            }
-//        }
+        //}
 
-        //return displayEatList;
     }
 
 
