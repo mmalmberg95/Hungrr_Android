@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,6 +21,10 @@ import java.util.ArrayList;
 
 
 public class inOutActivity extends AppCompatActivity {
+
+    private Handler mHandler;
+    private int mInterval = 2000;
+
     private ImageButton optOne;
     private ImageButton optTwo;
     private String[] options = {"one", "three", "five"};
@@ -120,7 +125,33 @@ public class inOutActivity extends AppCompatActivity {
             }
         });
 
+        mHandler = new Handler();
+        startRepeatingTask();
+    }
 
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        stopRepeatingTask();
+    }
+
+    Runnable mStatusChecker = new Runnable() {
+        @Override
+        public void run() {
+            try{
+               // updateStatus();
+            } finally {
+                mHandler.postDelayed(mStatusChecker, mInterval);
+            }
+        }
+    };
+
+    void startRepeatingTask(){
+        mStatusChecker.run();
+    }
+
+    void stopRepeatingTask(){
+        mHandler.removeCallbacks(mStatusChecker);
     }
 
     ArrayList<Food> filter (ArrayList<Food> list, int attr, String filter){
