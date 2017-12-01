@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class inOutActivity extends AppCompatActivity {
     private ImageButton optOne;
     private ImageButton optTwo;
-    private String[] options = {"one.jpg", "two.png", "three.png", "four.png", "five.jpg", "six.jpg"};
+    private String[] options = {"good", "bad", "casual", "fancy", "sweet", "savory"};
     private ArrayList<Integer> results;
     private int i;;
 
@@ -46,7 +46,7 @@ public class inOutActivity extends AppCompatActivity {
         final Intent intent = getIntent();
         intent.putExtra("update", i);
 
-        final Intent j = new Intent(this, foodChoiceActivity.class);
+        final Intent j = new Intent(this, breakTimeActivity.class);
 
         optOne.setOnClickListener(new View.OnClickListener() {
             @Override

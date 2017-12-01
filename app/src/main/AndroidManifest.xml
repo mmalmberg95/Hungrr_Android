@@ -19,7 +19,9 @@
         <activity android:name=".inOutActivity" />
         <activity android:name=".foodChoiceActivity" />
         <activity android:name=".CountdownActivity" />
-        <activity android:name=".finalPage"></activity>
+        <activity android:name=".finalPage" />
+        <activity android:name=".breakTimeActivity" />
+        <activity android:name=".CountdownFoodActivity"></activity>
     </application>
 
 </manifest>
