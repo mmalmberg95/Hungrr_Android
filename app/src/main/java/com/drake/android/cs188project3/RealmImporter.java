@@ -27,7 +27,7 @@ public class RealmImporter {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
             public void execute(Realm realm) {
-                InputStream inputStream = resources.openRawResource(R.raw.foodData);
+                InputStream inputStream = resources.openRawResource(R.raw.food_data);
                 try {
                     realm.createAllFromJson(FoodRealm.class, inputStream);
                     //transactionTime.setEnd(System.currentTimeMillis());
