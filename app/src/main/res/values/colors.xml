@@ -2,7 +2,11 @@
 <resources>
     <!--#3F51B5-->
     <!--#303F9F-->
-    <color name="colorPrimary">#05c3f9</color>
+    <color name="colorPrimary">#f3e3c7</color>
     <color name="colorPrimaryDark">#0691b8</color>
     <color name="colorAccent">#ff4081</color>
+    <color name="colorMainBG">#f3e3c7</color>
+    <color name="creamBG">#f3e9df</color>
+    <color name="orange">#d5672a</color>
+    <color name="burgundy">#8c1d18</color>
 </resources>

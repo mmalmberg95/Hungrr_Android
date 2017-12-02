@@ -27,8 +27,8 @@ public class inOutActivity extends AppCompatActivity {
 
     private ImageButton optOne;
     private ImageButton optTwo;
-    private String[] options = {"one", "three", "five"};
-    private String[] options2 = {"two", "four", "six"};
+    private String[] options = {"good", "casual", "sweet"};
+    private String[] options2 = {"bad", "fancy", "savory"};
     private int i;
     private ArrayList<Food> foodData = new ArrayList<>();
 
@@ -92,8 +92,9 @@ public class inOutActivity extends AppCompatActivity {
         final Intent intent = getIntent();
         intent.putExtra("update", i);
 
-        final Intent next = new Intent(this, foodChoiceActivity.class);
 
+        final Intent j = new Intent(this, breakTimeActivity.class);
+      
         optOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,9 +103,9 @@ public class inOutActivity extends AppCompatActivity {
                 filter(foodData, i, choice);
                 //((TransitionDrawable) optOne.getDrawable()).startTransition(500);
 
-                if (i == 5) {
+                if (i == 3) {
 
-                    startActivity(next);
+                    startActivity(j);
                 }
                 else{startActivity(intent);}
 
@@ -118,8 +119,8 @@ public class inOutActivity extends AppCompatActivity {
                 String choice = setup(i);
                 filter(foodData, i, choice);
 
-                if (i == 6) {
-                    startActivity(next);
+                if (i == 3) {
+                    startActivity(j);
                 }
                 else{startActivity(intent);}
             }

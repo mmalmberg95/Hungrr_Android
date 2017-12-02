@@ -4,73 +4,126 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/creamBG"
     tools:context="com.drake.android.cs188project3.finalPage">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/cuisineImg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/cuisineText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/nearYou"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cuisineText"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/resultText"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="The results are in..."
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cuisineText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
 
-        <Button
-            android:id="@+id/tryAgain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:text="Try Again?" />
+    <TextView
+        android:id="@+id/cuisineText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/resultText"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Cuisine Choice"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cuisineImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultText" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_below="@+id/cuisineText"
-            android:layout_centerHorizontal="true"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+    <ListView
+        android:id="@+id/nearByList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_above="@+id/FoodRoundReset"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/resultText"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:text="The results are in..."
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/nearYou"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/nearByList"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Nearest You"
+        android:textAlignment="center"
+        android:textColor="@color/orange"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/nearByList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cuisineImg" />
 
-        <TextView
-            android:id="@+id/cuisineText"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/resultText"
-            android:layout_marginTop="31dp"
-            android:text="Cuisine Choice"
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+    <ImageButton
+        android:id="@+id/resetAllBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/restart22"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/nearYou"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cuisineImg"
+        app:layout_constraintTop_toBottomOf="@+id/cuisineText" />
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_above="@+id/tryAgain"
-            android:layout_alignParentStart="true"
-            android:id="@+id/nearByList" />
-
-        <TextView
-            android:id="@+id/nearYou"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_above="@+id/nearByList"
-            android:layout_centerHorizontal="true"
-            android:text="Nearest You"
-            android:textAlignment="center"
-            android:textColor="@color/colorAccent"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-    </RelativeLayout>
+    <ImageButton
+        android:id="@+id/FoodRoundReset"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/restart1"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/nearYou"
+        app:layout_constraintEnd_toStartOf="@+id/cuisineImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cuisineText" />
 </android.support.constraint.ConstraintLayout>
