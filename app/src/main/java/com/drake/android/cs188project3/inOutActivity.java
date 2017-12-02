@@ -88,6 +88,7 @@ public class inOutActivity extends AppCompatActivity {
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                //insert results
                 if (i == 6) {
                     final Intent j = new Intent(context, foodChoiceActivity.class);
                     startActivity(j);
