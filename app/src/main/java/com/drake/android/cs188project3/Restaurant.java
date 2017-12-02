@@ -3,12 +3,9 @@ package com.drake.android.cs188project3;
 import android.graphics.Bitmap;
 import android.location.Location;
 
-/**
- * Created by Matthew on 12/1/2017.
- */
-
 public class Restaurant {
     private String name;
+
     private String phoneNumber;
     private String address;
     private Bitmap Image;
@@ -64,3 +61,4 @@ public class Restaurant {
         this.longitude = longitude;
     }
 }
+
