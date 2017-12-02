@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -27,7 +26,7 @@ private ArrayList<Restaurant> restaurantList;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_page);
 
-        tryAgain = (Button) findViewById(R.id.tryAgain);
+        tryAgain = (Button) findViewById(R.id.foodRoundReset);
         nearByList = (ListView) findViewById(R.id.nearByList);
         imageView = (ImageView) findViewById(R.id.imageView);
         cuisineText = (TextView)findViewById(R.id.cuisineText);
