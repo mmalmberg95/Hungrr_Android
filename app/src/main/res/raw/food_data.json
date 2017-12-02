@@ -1,0 +1,856 @@
+﻿[
+ {
+   "Food": "Lo Mein",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Mongolian Beef",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Egg Drop Soup",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good "
+ },
+ {
+   "Food": "Fried Rice",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Beef and Broccoli",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Cashew Chicken",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Egg Rolls",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Crab Rangoons",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Potstickers",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Stir Fry",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Kung Pao Chicken",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Bao Buns",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Wonton Soup",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Sweet and Sour Chicken",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Orange Chicken",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Fajitas",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Carne Asada",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad/Good"
+ },
+ {
+   "Food": "Quesadilla",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Red Rice",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Fish Tacos",
+   "Category": "Mexican/Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Beef Tacos",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good/Bad"
+ },
+ {
+   "Food": "Enchiladas",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Burritos",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Chicken and Tortilla Soup",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Guacamole",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Chimichanga",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Taco Salad",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Chips and Salsa",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Refried Beans",
+   "Category": "Mexican",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Spaghetti and Meatballs",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Chicken Parmesan",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Ravioli ",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Cheese Gnocchi",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Chicken Vesuvio",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Bruschetta",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad/Good"
+ },
+ {
+   "Food": "Lasagna",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Tuscan Chicken",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Garlic Bread",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Stuffed Pasta Shells",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Chicken Marsala",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Chicken Carbonara ",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Calzones",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Focaccia Bread",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Eggplant Parmesan",
+   "Category": "Italian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Burger",
+   "Category": "American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad "
+ },
+ {
+   "Food": "Fries",
+   "Category": "American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Onion Rings",
+   "Category": "American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Baked Chicken",
+   "Category": "American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good/Bad"
+ },
+ {
+   "Food": "Hot Dogs",
+   "Category": "American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Grilled Cheese",
+   "Category": "American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Hot Wings",
+   "Category": "American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Steak",
+   "Category": "American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "BBQ Ribs",
+   "Category": "American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Fried Chicken",
+   "Category": "American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Tom Kha",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Rice with Peanut Sauce",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Yum Neau",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Sweet Chili Noodles",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Salmon Cho Chee",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Stir Fry",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Peanut Curry",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Red Curry",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Duck With Garlic Sauce",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Udon Kee Mao",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Fried Rice",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Thai Chicken and Broccoli",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Duck Pad Thai",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Fried Tofu",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Lemongrass Chicken",
+   "Category": "PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Grilled Salmon",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Scallops ",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Lobster",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Fried Tilapia",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Crab Legs",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Coconut Shrimp",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Seafood Pasta",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good/Bad"
+ },
+ {
+   "Food": "Seafood Stew",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good/Bad"
+ },
+ {
+   "Food": "Shrimp Cocktail",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Crab Cakes",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good/Bad"
+ },
+ {
+   "Food": "Paella",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Crab Rangoons",
+   "Category": "Seafood/PanAsian",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Mussels",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Rockefeller Oysters",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Red Snapper",
+   "Category": "Seafood",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Cheesy Grits",
+   "Category": "Southern American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Fried Chicken",
+   "Category": "Southern American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Biscuits and Gravy",
+   "Category": "Southern American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Chicken Fried Steak",
+   "Category": "Southern American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Potato Salad",
+   "Category": "Southern American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Chicken and Dumplings",
+   "Category": "Southern American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Southern Fish Fry",
+   "Category": "Southern American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Cornbread",
+   "Category": "Southern American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Shrimp and Grits",
+   "Category": "Southern American",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Mushroom Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Pepperoni Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Sausage Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Cheese Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Pineapple Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Deep Dish Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Margherita Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Greek Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "White Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Neopolitan Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Hawaiian Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "BBQ Chicken and Onion Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Artichoke and Spinach Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Bacon Pizza",
+   "Category": "Pizza",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Lamb Gyro",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good/Bad"
+ },
+ {
+   "Food": "Chicken Gyro",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good/Bad"
+ },
+ {
+   "Food": "Lamb Kabob",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Hummus",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Falafel Sandwich",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Dolmathes (Stuffed Grape Leaves)",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Greek Salad",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Tiropites (Cheese Pastry)",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Tzatziki with Pita Bread",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Spanakopita (Spinach Pastry)",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad"
+ },
+ {
+   "Food": "Pork Souvlaki (Grilled Pork Skewers)",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Stuffed Tomatoes",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Roasted Stuffed Bell Peppers",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ },
+ {
+   "Food": "Grilled Lamb Chops",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good/Bad"
+ },
+ {
+   "Food": "Mediterranean Roasted Vegetables",
+   "Category": "Greek",
+   "Sweet or Savory": "Savory",
+   "Pricey or Casual": "Casual/Fancy",
+   "Good or Bad": "Good"
+ }
+]
