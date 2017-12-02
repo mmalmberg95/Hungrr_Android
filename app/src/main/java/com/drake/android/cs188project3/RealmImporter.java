@@ -1,7 +1,6 @@
 package com.drake.android.cs188project3;
 
 import android.content.res.Resources;
-import android.util.Log;
 
 import java.io.InputStream;
 
@@ -13,7 +12,7 @@ import io.realm.Realm;
 
 public class RealmImporter {
     Resources resources;
-    TransactionTime transactionTime;
+    //TransactionTime transactionTime;
 
     public RealmImporter(Resources resources) {
         this.resources = resources;
@@ -23,7 +22,7 @@ public class RealmImporter {
         Realm realm = Realm.getDefaultInstance();
 
         // Transaction timer
-        transactionTime = new TransactionTime(System.currentTimeMillis());
+        //transactionTime = new TransactionTime(System.currentTimeMillis());
 
         realm.executeTransaction(new Realm.Transaction() {
             @Override
@@ -31,7 +30,7 @@ public class RealmImporter {
                 InputStream inputStream = resources.openRawResource(R.raw.foodData);
                 try {
                     realm.createAllFromJson(FoodRealm.class, inputStream);
-                    transactionTime.setEnd(System.currentTimeMillis());
+                    //transactionTime.setEnd(System.currentTimeMillis());
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
