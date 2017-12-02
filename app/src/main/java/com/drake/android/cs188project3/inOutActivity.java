@@ -1,7 +1,9 @@
 package com.drake.android.cs188project3;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,11 +14,13 @@ import java.util.ArrayList;
 
 
 public class inOutActivity extends AppCompatActivity {
+    private Context context;
+
     private ImageButton optOne;
     private ImageButton optTwo;
     private String[] options = {"one.jpg", "two.png", "three.png", "four.png", "five.jpg", "six.jpg"};
     private ArrayList<Integer> results;
-    private int i;;
+    private int i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +49,7 @@ public class inOutActivity extends AppCompatActivity {
 
         final Intent intent = getIntent();
         intent.putExtra("update", i);
-
+        context = this;
         final Intent j = new Intent(this, foodChoiceActivity.class);
 
         optOne.setOnClickListener(new View.OnClickListener() {
@@ -76,6 +80,24 @@ public class inOutActivity extends AppCompatActivity {
             }
         });
 
-
+        switchTimer();
     }
+
+    public void switchTimer(){
+        Handler mHandler = new Handler();
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (i == 6) {
+                    final Intent j = new Intent(context, foodChoiceActivity.class);
+                    startActivity(j);
+                }
+                else{
+                    final Intent intent = getIntent();
+                    intent.putExtra("update", i);
+                    startActivity(intent);}
+            }
+        }, 2000);
+    }
+
 }
