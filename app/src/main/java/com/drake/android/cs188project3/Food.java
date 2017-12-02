@@ -2,6 +2,8 @@ package com.drake.android.cs188project3;
 
 import android.media.Image;
 
+import io.realm.RealmObject;
+
 /**
  * Created by Matthew on 11/25/2017.
  */
@@ -25,4 +27,5 @@ public class Food {
     public void setTag(Integer tag) {
         this.tag = tag;
     }
+
 }
