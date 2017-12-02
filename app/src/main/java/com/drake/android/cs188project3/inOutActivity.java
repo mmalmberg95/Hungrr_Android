@@ -72,7 +72,7 @@ public class inOutActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        assignImages(foodData);
+//        assignImages(foodData);
 
 
         Intent myIntent = getIntent();
@@ -98,6 +98,8 @@ public class inOutActivity extends AppCompatActivity {
         optOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int Img1 = getResources().getIdentifier("goodchosen", "drawable", getPackageName());
+                optOne.setImageResource(Img1);
 
                 String choice = setup(i);
                 filter(foodData, i, choice);
@@ -107,8 +109,23 @@ public class inOutActivity extends AppCompatActivity {
 
                     startActivity(j);
                 }
-                else{startActivity(intent);}
+//                else{startActivity(intent);
+//              }
 
+                Thread timer = new Thread(){
+                    public void run() {
+                        try{
+                            sleep(1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        finally {
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
+                };
+                timer.start();
             }
         });
 
@@ -209,16 +226,16 @@ public class inOutActivity extends AppCompatActivity {
 
         return choice;
     }
-
-    ArrayList<Food> assignImages (ArrayList<Food> list){
-        for (int i = 0; i < list.size(); i++) {
-            int drawableId = getResources().getIdentifier(list.get(i).getName(), "drawable", getPackageName());
-            Drawable image = getResources().getDrawable(drawableId);
-            Bitmap newImage = ((BitmapDrawable) image).getBitmap();
-
-            list.get(i).setFoodImage(newImage);
-        }
-
-        return list;
-    }
+//
+//    ArrayList<Food> assignImages (ArrayList<Food> list){
+//        for (int i = 0; i < list.size(); i++) {
+//            int drawableId = getResources().getIdentifier(list.get(i).getName(), "drawable", getPackageName());
+//            Drawable image = getResources().getDrawable(drawableId);
+//            Bitmap newImage = ((BitmapDrawable) image).getBitmap();
+//
+//            list.get(i).setFoodImage(newImage);
+//        }
+//
+//        return list;
+//    }
 }
