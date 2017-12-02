@@ -17,29 +17,6 @@
     <!--app:lottie_autoPlay="true"/>-->
 
 
-    <!--<ImageSwitcher-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content">-->
-
-        <!--<ImageView-->
-            <!--android:id="@+id/timerThree"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--app:srcCompat="@drawable/timerThree" />-->
-
-        <!--<ImageView-->
-            <!--android:id="@+id/timerTwo"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--app:srcCompat="@drawable/timerTwo" />-->
-
-        <!--<ImageView-->
-            <!--android:id="@+id/timerOne"-->
-            <!--android:layout_width="300dp"-->
-            <!--android:layout_height="300dp"-->
-            <!--app:srcCompat="@drawable/timerOne" />-->
-    <!--</ImageSwitcher>-->
-
     <ViewFlipper
         android:id="@+id/imgFlipper"
         android:layout_width="wrap_content"

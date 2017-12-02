@@ -29,6 +29,8 @@ public class inOutActivity extends AppCompatActivity {
     private ImageButton optTwo;
     private String[] options = {"good", "casual", "sweet"};
     private String[] options2 = {"bad", "fancy", "savory"};
+    private String[] chosen1 = {"goodchosen", "casualchosen", "sweetchosen"}; //Jedi
+    private String[] chosen2 = {"badchosen", "fancychosen", "savorychosen"};
     private int i;
     private ArrayList<Food> foodData = new ArrayList<>();
 
@@ -87,6 +89,8 @@ public class inOutActivity extends AppCompatActivity {
         int Img2 = getResources().getIdentifier(options2[i], "drawable", getPackageName());
         optTwo.setImageResource(Img2);
 
+
+
         i++;
 
         final Intent intent = getIntent();
@@ -98,7 +102,7 @@ public class inOutActivity extends AppCompatActivity {
         optOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int Img1 = getResources().getIdentifier("goodchosen", "drawable", getPackageName());
+                int Img1 = getResources().getIdentifier(chosen1[i-1], "drawable", getPackageName());
                 optOne.setImageResource(Img1);
 
                 String choice = setup(i);
@@ -115,7 +119,7 @@ public class inOutActivity extends AppCompatActivity {
                 Thread timer = new Thread(){
                     public void run() {
                         try{
-                            sleep(1000);
+                            sleep(50);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -132,14 +136,38 @@ public class inOutActivity extends AppCompatActivity {
         optTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                i++;
+                //i++;
+                // MATT MATT MATT MATT MATT MATT I'M NOT SURE WHAT THIS WAS FOR, I DO NOT WANT
+                // BREAK IT. WAS CAUSING PROBLEMS WITH THE STRING ARRAYS FOR CHOSEN OPTIONS.
+                // PLEASE CONFIRM IT STILL SERVES INITIAL PURPOSE
+
+                int Img2 = getResources().getIdentifier(chosen2[i-1], "drawable", getPackageName());
+                optTwo.setImageResource(Img2);
+
+
                 String choice = setup(i);
                 filter(foodData, i, choice);
 
                 if (i == 3) {
                     startActivity(j);
                 }
-                else{startActivity(intent);}
+//                else{startActivity(intent);
+//              }
+
+                Thread timer = new Thread(){
+                    public void run() {
+                        try{
+                            sleep(50);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        finally {
+                            startActivity(intent);
+                            finish();
+                        }
+                    }
+                };
+                timer.start();
             }
         });
 
