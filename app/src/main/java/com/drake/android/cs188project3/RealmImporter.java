@@ -39,6 +39,5 @@ public class RealmImporter {
                 }
             }
         });
-        Log.d("Realm","createAllFromJson Task completed in " + transactionTime.getDuration() + "ms");
     }
 }

@@ -18,7 +18,7 @@ public class App extends Application {
         // Config Realm for the application
         Realm.init(this);
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
-                .name("foodDatabase.realm");
+                .name("foodDatabase.realm")
                 .build();
 
         Realm.setDefaultConfiguration(realmConfiguration);
