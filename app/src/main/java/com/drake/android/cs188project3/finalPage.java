@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -15,7 +16,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class finalPage extends AppCompatActivity {
-private Button tryAgain;
+private ImageButton foodReset;
+private ImageButton startOver;
 private ImageView imageView;
 private TextView cuisineText;
 private ListView nearByList;
@@ -26,17 +28,26 @@ private ArrayList<Restaurant> restaurantList;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_page);
 
-        tryAgain = (Button) findViewById(R.id.foodRoundReset);
+        foodReset = (ImageButton) findViewById(R.id.FoodRoundReset);
+        startOver = (ImageButton) findViewById(R.id.resetAllBtn);
         nearByList = (ListView) findViewById(R.id.nearByList);
-        imageView = (ImageView) findViewById(R.id.imageView);
+        imageView = (ImageView) findViewById(R.id.cuisineImg);
         cuisineText = (TextView)findViewById(R.id.cuisineText);
 
         foodAdapter foodAdapter = new foodAdapter();
 
-        tryAgain.setOnClickListener(new View.OnClickListener() {
+        foodReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getBaseContext(), foodChoiceActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        startOver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), inOutActivity.class);
                 startActivity(intent);
             }
         });

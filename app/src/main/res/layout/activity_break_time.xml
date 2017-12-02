@@ -47,12 +47,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/enter"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintHorizontal_bias="0.96"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textBG"
-        app:layout_constraintVertical_bias="0.51"
+        app:layout_constraintVertical_bias="0.433"
         app:srcCompat="@drawable/enter" />
 
     <TextView
@@ -109,4 +111,5 @@
         app:layout_constraintEnd_toEndOf="@+id/textBG"
         app:layout_constraintStart_toStartOf="@+id/textBG"
         app:layout_constraintTop_toBottomOf="@+id/brkTxt2" />
+
 </android.support.constraint.ConstraintLayout>

@@ -46,18 +46,20 @@
 
         <ImageButton
             android:id="@+id/playButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/introTxt"
-            android:layout_marginTop="65dp"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="66dp"
             android:layout_toEndOf="@+id/welcomeTxt"
+            android:background="@drawable/enter"
+            android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/bottomBackground"
             app:layout_constraintHorizontal_bias="0.945"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/bottomBackground"
             app:layout_constraintVertical_bias="0.7"
-            app:srcCompat="@android:drawable/ic_media_play" />
+            app:srcCompat="@drawable/enter" />
 
         <ImageView
             android:id="@+id/monsterImg"
