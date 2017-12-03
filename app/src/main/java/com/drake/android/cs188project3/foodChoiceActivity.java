@@ -26,9 +26,6 @@ public class foodChoiceActivity extends AppCompatActivity {
         foodOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Someone needs to fill in this code, I only put what this intent here to test the final page and see that it works. It does.
-                Intent intent = new Intent(getBaseContext(),finalPage.class);
-                startActivity(intent);
 
             }
         });
@@ -37,8 +34,7 @@ public class foodChoiceActivity extends AppCompatActivity {
         foodTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(),finalPage.class);
-                startActivity(intent);
+
             }
         });
 
@@ -50,15 +46,15 @@ public class foodChoiceActivity extends AppCompatActivity {
         mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-//                insert results
-//                 if (i == 6) {
-//                    final Intent j = new Intent(context, finalPage.class);
-//                    startActivity(j);
-//                }
-//                else{
-//                    final Intent intent = getIntent();
-//                    intent.putExtra("update", i);
-//                    startActivity(intent);}
+                //insert results
+                 if (i == 10) {
+                    final Intent j = new Intent(context, finalPage.class);
+                    startActivity(j);
+                }
+                else{
+                    final Intent intent = getIntent();
+                    intent.putExtra("update", i);
+                    startActivity(intent);}
             }
         }, 2000);
     }
