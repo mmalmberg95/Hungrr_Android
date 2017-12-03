@@ -52,43 +52,9 @@ public class inOutActivity extends AppCompatActivity {
         optTwo = (ImageButton) findViewById(R.id.optTwo);
 
         realm = Realm.getDefaultInstance();
-        //ArrayList<FoodRealm> foodData =
+        RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
+        foodData.addAll(realm.copyFromRealm(all));
 
-
-//        RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
-//        foodData.addAll(realm.copyFromRealm(all));
-
-//        InputStream is = getResources().openRawResource(R.raw.food_spreadsheet);
-//
-//        BufferedReader reader = new BufferedReader(
-//                new InputStreamReader(is, Charset.forName("UTF-8"))
-//        );
-//
-//        //loop to read file
-//        String line = "";
-//        try {
-//            reader.readLine();
-//            while ((line = reader.readLine()) != null) {
-//                //split by comma
-//                //info is a just a identifier for the different splits
-//                String[] info = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
-//
-//                Food data = new Food();
-//                data.setName(info[0]);
-//                data.setType(Integer.parseInt(info[1]));
-//                data.setTaste((info[2]));
-//                data.setPrice(info[3]);
-//                data.setHealth(info[4]);
-//
-//                foodData.add(data);
-//
-//            }
-//
-//        } catch (IOException e) {
-//            //wtf = What a Terrible Failure
-//            Log.wtf("OptionsList", "Error reading file at line " + line, e);
-//            e.printStackTrace();
-//        }
 
 //        assignImages(foodData);
 
@@ -98,6 +64,8 @@ public class inOutActivity extends AppCompatActivity {
 
         i = update;
 
+        //If opening round, pull down all available data and assign images to it to
+        // manipulate later.
         if (i==0){
 //            RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
 //            foodData.addAll(realm.copyFromRealm(all));
@@ -147,8 +115,8 @@ public class inOutActivity extends AppCompatActivity {
 
                 String choice = setup(i);
                 filter(foodData, i, choice);
-                //((TransitionDrawable) optOne.getDrawable()).startTransition(500);
 
+                //Changes Background of image to show selection
                 Thread timer = new Thread(){
                     public void run() {
                         try{
@@ -178,11 +146,11 @@ public class inOutActivity extends AppCompatActivity {
                 int Img2 = getResources().getIdentifier(chosen2[i-1], "drawable", getPackageName());
                 optTwo.setImageResource(Img2);
 
-
+                //filters the available data based on the choice
                 String choice = setup(i);
                 filter(foodData, i, choice);
 
-
+                //changes background of image to show selection
                 Thread timer = new Thread(){
                     public void run() {
                         try{
@@ -209,13 +177,13 @@ public class inOutActivity extends AppCompatActivity {
     }
 
 
-
+    //filters the available data by removing the data that doesn't fit the description
     ArrayList<FoodRealm> filter (ArrayList<FoodRealm> list, int attr, String filter){
         ArrayList<FoodRealm> available = new ArrayList<>();
         if (attr == 1){
             for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getGoodOrBad() != filter){
-                    available.remove(list.get(i));
+                if (list.get(i).getGoodOrBad() == filter){
+                    available.add(list.get(i));
                 }
             }
             return available;
@@ -224,7 +192,7 @@ public class inOutActivity extends AppCompatActivity {
         else if(attr == 2){
             for (int i = 0; i < list.size(); i++){
                 if (list.get(i).getPriceyOrCasual() == filter){
-                    available.remove(list.get(i));
+                    available.add(list.get(i));
                 }
             }
             return available;
@@ -233,7 +201,7 @@ public class inOutActivity extends AppCompatActivity {
         else if(attr == 3) {
             for (int i = 0; i < list.size(); i++){
                 if (list.get(i).getSweetOrSavory() == filter){
-                    available.remove(list.get(i));
+                    available.add(list.get(i));
                 }
             }
             return available;
@@ -241,6 +209,7 @@ public class inOutActivity extends AppCompatActivity {
         return available;
     }
 
+    //Translates integers to strings
     String setup (int n){
         String choice = "null";
         if ( i == 1){
@@ -264,7 +233,7 @@ public class inOutActivity extends AppCompatActivity {
 
         return choice;
     }
-//
+
 
     @Override
     protected void onDestroy(){

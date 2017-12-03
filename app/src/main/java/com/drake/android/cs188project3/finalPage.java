@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.location.Location;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -13,6 +14,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 public class finalPage extends AppCompatActivity {
@@ -27,6 +33,52 @@ private ArrayList<Restaurant> restaurantList;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_page);
+
+        Intent myIntent = getIntent();
+        String category = myIntent.getStringExtra("type");
+
+        InputStream is = getResources().openRawResource(R.raw.restaurant_data);
+
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(is, Charset.forName("UTF-8"))
+        );
+
+        //loop to read file
+        String line = "";
+        try {
+            reader.readLine();
+            while ((line = reader.readLine()) != null) {
+                //split by comma
+                //info is a just a identifier for the different splits
+                String[] info = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
+
+                Restaurant data = new Restaurant();
+                data.setName(info[0]);
+                data.setCategory(info[1]);
+                data.setPrice(info[2]);
+                data.setLatitude(Float.parseFloat(info[3]));
+                data.setLongitude(Float.parseFloat(info[4]));
+                data.setAddress(info[5]);
+                data.setPhoneNumber(info[6]);
+
+
+                restaurantList.add(data);
+
+            }
+
+        } catch (IOException e) {
+            //wtf = What a Terrible Failure
+            Log.wtf("OptionsList", "Error reading file at line " + line, e);
+            e.printStackTrace();
+        }
+
+        for (int i=0; i <= restaurantList.size() - 1; i++){
+            Restaurant current = restaurantList.get(i);
+
+            if(current.getCategory() != category){
+                restaurantList.remove(current);
+            }
+        }
 
         foodReset = (ImageButton) findViewById(R.id.FoodRoundReset);
         startOver = (ImageButton) findViewById(R.id.resetAllBtn);
@@ -59,7 +111,7 @@ private ArrayList<Restaurant> restaurantList;
 
         @Override
         public int getCount() {
-            return 1;
+            return restaurantList.size();
         }
 
         @Override
@@ -81,36 +133,13 @@ private ArrayList<Restaurant> restaurantList;
             final TextView address = (TextView) findViewById(R.id.address);
             final TextView phoneNumber = (TextView) findViewById(R.id.phoneNumber);
 
-//            name.setText("Test");
-//            address.setText("Test Place");
-//            address.setText("Test Number");
+
+            name.setText(restaurantList.get(i).getName());
+            address.setText(restaurantList.get(i).getAddress());
+            phoneNumber.setText(restaurantList.get(i).getPhoneNumber());
 
             return view;
         }
     }
-
-        //public ArrayList<EatData>
-    void checkDistance(int eventID, int maxDistance)
-    {
-        Location user =  new Location("user");
-        Location event = new Location("event");
-
-        //Location of Iowa Capitol Building
-        user.setLatitude(41.6005448);
-        user.setLongitude(-93.6091064);
-
-
-
-        event.setLatitude(restaurantList.get(eventID).getLatitude());
-        event.setLongitude(restaurantList.get(eventID).getLongitude());
-
-        double distance = user.distanceTo(event); //meters to miles
-//                /1609.39;
-
-//            if (distance <= maxDistance) {
-        //}
-
-    }
-
 
 }

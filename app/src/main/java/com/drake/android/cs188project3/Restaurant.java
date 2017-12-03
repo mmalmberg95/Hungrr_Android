@@ -5,7 +5,8 @@ import android.location.Location;
 
 public class Restaurant {
     private String name;
-
+    private String category;
+    private String price;
     private String phoneNumber;
     private String address;
     private Bitmap Image;
@@ -59,6 +60,22 @@ public class Restaurant {
 
     public void setLongitude(float longitude) {
         this.longitude = longitude;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 }
 

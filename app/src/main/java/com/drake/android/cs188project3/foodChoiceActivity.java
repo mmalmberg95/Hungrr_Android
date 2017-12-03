@@ -62,7 +62,6 @@ public class foodChoiceActivity extends AppCompatActivity {
         foodTwo = (ImageButton) findViewById(R.id.foodTwo);
 
         realm = Realm.getDefaultInstance();
-       // foodData = new ArrayList<FoodRealm>(this, realm.where(FoodRealm.class).findAll());
 
 
         //gets the number round of the game
@@ -77,9 +76,11 @@ public class foodChoiceActivity extends AppCompatActivity {
             RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
             foodData.addAll(all);
 
+            //pulls two random options from the data set
             Opt1 = pull_random(foodData);
             Opt2 = pull_random(foodData);
 
+            //makes sure the options aren't of the same Category
             checkSame(Opt1, Opt2, foodData);
 
             //Initializes the results array to update with count numbers
@@ -95,9 +96,12 @@ public class foodChoiceActivity extends AppCompatActivity {
 
         //last choice in game
         else if(round == 10){
+            //Gets the most chosen category and pulls from that category
             int number = getMax(results);
             type = findString(number);
             Opt1 = pull_last(foodData, type);
+
+            //Gets second most chosen category and pulls from that category
             number = getMax(results);
             type = findString(number);
             Opt2 = pull_last(foodData, type);
@@ -105,16 +109,22 @@ public class foodChoiceActivity extends AppCompatActivity {
 //            pictureView(Opt1, foodOne);
 //            pictureView(Opt2, foodTwo);
 
+            //Resets results for next play of game
             previous.clear();
             results.clear();
         }
 
         //Every Round
          else{
+            //pulls one option with the same category as the one previously chosen
+            // in the last round
             Opt1 = pull_last(foodData, type);
+            //pulls random option
             Opt2 = pull_random(foodData);
 
+            //compares the two options
             checkSame(Opt1, Opt2, foodData);
+            //Makes sure that the new category pulled hasn't been used before
             Opt2 = checkType(type, previous, foodData, Opt2);
 
 //            pictureView(Opt1, foodOne);
@@ -122,26 +132,32 @@ public class foodChoiceActivity extends AppCompatActivity {
 
         }
 
-        //final Intent next = new Intent(this, lastPage.class);
+        final Intent next = new Intent(this, finalPage.class);
 
         foodOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                //gets the category of chosen option and sends it to the activity for
+                // future reference
                 String type = Opt1.getCategory();
                 final Intent intent = getIntent();
                 intent.putExtra("type", type);
 
-                int category =findCategory(type);
+                //updates the correct index of the results array
+                int category = findCategory(type);
                 int update = results.get(category);
                 update ++;
                 results.set(category, update);
 
+                //adds opposite category to the previous array so that
+                // the category wont get chosen again
                 String other = Opt2.getCategory();
                 previous.add(other);
 
+                //starts next activity based on where in the game we are
                 if (round == 10){
-                    //startActivity(next);
+                    startActivity(next);
                 }
                 else{
                     round ++;
@@ -155,20 +171,27 @@ public class foodChoiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                //gets the category of chosen option and sends it to the activity for
+                // future reference
                 String type = Opt2.getCategory();
                 final Intent intent = getIntent();
                 intent.putExtra("type", type);
 
+                //updates the correct index of the results array
                 int category = findCategory(type);
                 int update = results.get(category);
                 update ++;
                 results.set(category, update);
 
+                //adds opposite category to the previous array so that
+                // the category wont get chosen again
                 String other = Opt1.getCategory();
                 previous.add(other);
 
+
+                //starts next activity based on where in the game we are
                 if (round == 10){
-                    //startActivity(next);
+                    startActivity(next);
                 }
                 else{
                     round ++;
@@ -179,7 +202,7 @@ public class foodChoiceActivity extends AppCompatActivity {
     }
 
 
-
+    //sets the imageView with the corresponding image of food
 //    void pictureView (FoodRealm item,  ImageButton food) {
 //        byte[] image = item.getFoodImage();
 //        BitmapFactory.Options options = new BitmapFactory.Options();
@@ -253,7 +276,7 @@ public class foodChoiceActivity extends AppCompatActivity {
                 index = i;
             }
         }
-        results.remove(index);
+        results.set(index, 0);
         return index;
     }
 
