@@ -47,6 +47,7 @@ public class foodChoiceActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //insert results
+                int i = 10;
                  if (i == 10) {
                     final Intent j = new Intent(context, finalPage.class);
                     startActivity(j);
@@ -56,6 +57,6 @@ public class foodChoiceActivity extends AppCompatActivity {
                     intent.putExtra("update", i);
                     startActivity(intent);}
             }
-        }, 2000);
+        }, 3000);
     }
 }
