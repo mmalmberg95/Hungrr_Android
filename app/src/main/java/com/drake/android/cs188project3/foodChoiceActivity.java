@@ -38,7 +38,7 @@ public class foodChoiceActivity extends AppCompatActivity {
 
     //Put all in Realm
     private ArrayList<FoodRealm> foodData;
-    private ArrayList<Food> lastData;
+    private ArrayList<FoodRealm> lastData;
     private ArrayList<Integer> results;
     private ArrayList<String> previous;
 
