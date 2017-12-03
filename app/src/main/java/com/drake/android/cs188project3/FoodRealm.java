@@ -13,6 +13,8 @@ public class FoodRealm extends RealmObject {
     private String SweetOrSavory;
     private String PriceyOrCasual;
     private String GoodOrBad;
+//    private String drawable;
+    //private byte[] foodImage;
     private RealmList<FoodRealm> foodData;
     private RealmList<FoodRealm> available;
 
@@ -65,10 +67,27 @@ public class FoodRealm extends RealmObject {
     }
 
     public RealmList<FoodRealm> getAvailable() {
+
         return available;
     }
 
     public void setAvailable(RealmList<FoodRealm> available) {
         this.available = available;
     }
+//
+//    public byte[] getFoodImage() {
+//        return foodImage;
+//    }
+//
+//    public void setFoodImage(byte[] foodImage) {
+//        this.foodImage = foodImage;
+//    }
+
+//    public String getDrawable() {
+//        return drawable;
+//    }
+//
+//    public void setDrawable(String drawable) {
+//        this.drawable = drawable;
+//    }
 }

@@ -4,853 +4,975 @@
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "lo_mein"
  },
  {
    "Food": "Mongolian Beef",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "mongolian_beef"
  },
  {
    "Food": "Egg Drop Soup",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good "
+   "Good or Bad": "Good ",
+   "drawable": "egg_drop_soup"
  },
  {
    "Food": "Fried Rice",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "fried_rice"
  },
  {
    "Food": "Beef and Broccoli",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "beef_and_broccoli"
  },
  {
    "Food": "Cashew Chicken",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "cashew_chicken"
  },
  {
    "Food": "Egg Rolls",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "egg_rolls"
  },
  {
    "Food": "Crab Rangoons",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "crab_rangoons"
  },
  {
    "Food": "Potstickers",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "lo_mein"
  },
  {
    "Food": "Stir Fry",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "stir_fry"
  },
  {
    "Food": "Kung Pao Chicken",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "kung_pao_chicken"
  },
  {
    "Food": "Bao Buns",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "bao_buns"
  },
  {
    "Food": "Wonton Soup",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "wonton_soup"
  },
  {
    "Food": "Sweet and Sour Chicken",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "sweet_and_sour_chicken"
  },
  {
    "Food": "Orange Chicken",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "orange_chicken"
  },
  {
    "Food": "Fajitas",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good",
+   "drawable": "fajitas"
  },
  {
    "Food": "Carne Asada",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Bad/Good"
+   "Good or Bad": "Bad",
+   "drawable": "carne_asada"
  },
  {
    "Food": "Quesadilla",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "quesadilla"
  },
  {
    "Food": "Red Rice",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "red_rice"
  },
  {
    "Food": "Fish Tacos",
-   "Category": "Mexican/Seafood",
+   "Category": "Mexican",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good",
+   "drawable": "fish_tacos"
  },
  {
    "Food": "Beef Tacos",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good/Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "beef_tacos"
  },
  {
    "Food": "Enchiladas",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "enchiladas"
  },
  {
    "Food": "Burritos",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "burritos"
  },
  {
    "Food": "Chicken and Tortilla Soup",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "chicken_and_tortilla_soup"
  },
  {
    "Food": "Guacamole",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "guacamole"
  },
  {
    "Food": "Chimichanga",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "chimichanga"
  },
  {
    "Food": "Taco Salad",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "taco_salad"
  },
  {
    "Food": "Chips and Salsa",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "chips_and_salsa"
  },
  {
    "Food": "Refried Beans",
    "Category": "Mexican",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "refried_beans"
  },
  {
    "Food": "Spaghetti and Meatballs",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good",
+   "drawable": "spaghetti_meatballs"
  },
  {
    "Food": "Chicken Parmesan",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "chicken_parmesan"
  },
  {
    "Food": "Ravioli ",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "ravioli"
  },
  {
    "Food": "Cheese Gnocchi",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "cheese_gnocchi"
  },
  {
    "Food": "Chicken Vesuvio",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "chicken_vesuvio"
  },
  {
    "Food": "Bruschetta",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Bad/Good"
+   "Good or Bad": "Good",
+   "drawable": "bruschetta"
  },
  {
    "Food": "Lasagna",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good",
+   "drawable": "lasagna"
  },
  {
    "Food": "Tuscan Chicken",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "tuscan_chicken"
  },
  {
    "Food": "Garlic Bread",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "garlic_bread"
  },
  {
    "Food": "Stuffed Pasta Shells",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "stuffed_pasta"
  },
  {
    "Food": "Chicken Marsala",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "chicken_marsala"
  },
  {
    "Food": "Chicken Carbonara ",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "chicken_carbonara"
  },
  {
    "Food": "Calzones",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "calzones"
  },
  {
    "Food": "Focaccia Bread",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "focaccia_bread"
  },
  {
    "Food": "Eggplant Parmesan",
    "Category": "Italian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "eggplant_parmesan"
  },
  {
    "Food": "Burger",
    "Category": "American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad "
+   "Good or Bad": "Bad ",
+   "drawable": "burger"
  },
  {
    "Food": "Fries",
    "Category": "American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "fries"
  },
  {
    "Food": "Onion Rings",
    "Category": "American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "onion_rings"
  },
  {
    "Food": "Baked Chicken",
    "Category": "American",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good/Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good",
+   "drawable": "baked_chicken"
  },
  {
    "Food": "Hot Dogs",
    "Category": "American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "hot_dogs"
  },
  {
    "Food": "Grilled Cheese",
    "Category": "American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "grilled_cheese"
  },
  {
    "Food": "Hot Wings",
    "Category": "American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "hot_wings"
  },
  {
    "Food": "Steak",
    "Category": "American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "steak"
  },
  {
    "Food": "BBQ Ribs",
    "Category": "American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "bbq_ribs"
  },
  {
    "Food": "Fried Chicken",
    "Category": "American",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "fried_chicken"
  },
  {
    "Food": "Tom Kha",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad",
+   "drawable": "tom_kha"
  },
  {
    "Food": "Rice with Peanut Sauce",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "rice_peanut_sauce"
  },
  {
    "Food": "Yum Neau",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad",
+   "drawable": "yum_nua"
  },
  {
    "Food": "Sweet Chili Noodles",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "sweet_chilli_noodles"
  },
  {
    "Food": "Salmon Cho Chee",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "salmon_cho_chee"
  },
  {
    "Food": "Stir Fry",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad",
+   "drawable": "stir_fry"
  },
  {
    "Food": "Peanut Curry",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad",
+   "drawable": "peanut_curry"
  },
  {
    "Food": "Red Curry",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad",
+   "drawable": "red_curry"
  },
  {
    "Food": "Duck With Garlic Sauce",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad",
+   "drawable": "duck_garlic_sauce"
  },
  {
    "Food": "Udon Kee Mao",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "udon_kee_mao"
  },
  {
    "Food": "Fried Rice",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "fried_rice"
  },
  {
    "Food": "Thai Chicken and Broccoli",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good",
+   "drawable": "chicken_broccoli"
  },
  {
    "Food": "Duck Pad Thai",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad",
+   "drawable": "duck_pad_thai"
  },
  {
    "Food": "Fried Tofu",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad",
+   "drawable": "fried_tofu"
  },
  {
    "Food": "Lemongrass Chicken",
    "Category": "PanAsian",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good",
+   "drawable": "lemongrass_chicken"
  },
  {
    "Food": "Grilled Salmon",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "grilled_salmon"
  },
  {
    "Food": "Scallops ",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "scallops"
  },
  {
    "Food": "Lobster",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "lobster"
  },
  {
    "Food": "Fried Tilapia",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "fried_tilapia"
  },
  {
    "Food": "Crab Legs",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "crab_legs"
  },
  {
    "Food": "Coconut Shrimp",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "coconut_shrimp"
  },
  {
    "Food": "Seafood Pasta",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good/Bad"
+   "Good or Bad": "Good/Bad",
+   "drawable": "seafood_pasta"
  },
  {
    "Food": "Seafood Stew",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good/Bad"
+   "Good or Bad": "Good/Bad",
+   "drawable": "seafood_stew"
  },
  {
    "Food": "Shrimp Cocktail",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "shrimp_cocktail"
  },
  {
    "Food": "Crab Cakes",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good/Bad"
+   "Good or Bad": "Bad",
+   "drawable": "crab_cakes"
  },
  {
    "Food": "Paella",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "paella"
  },
  {
    "Food": "Crab Rangoons",
    "Category": "Seafood/PanAsian",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "crab_rangoons"
  },
  {
    "Food": "Mussels",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "mussels"
  },
  {
    "Food": "Rockefeller Oysters",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "rockefeller_oysters"
  },
  {
    "Food": "Red Snapper",
    "Category": "Seafood",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "red_snapper"
  },
  {
    "Food": "Cheesy Grits",
    "Category": "Southern American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "cheesy_grits"
  },
  {
    "Food": "Fried Chicken",
    "Category": "Southern American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "fried_chicken"
  },
  {
    "Food": "Biscuits and Gravy",
    "Category": "Southern American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "biscuits_and_gravy"
  },
  {
    "Food": "Chicken Fried Steak",
    "Category": "Southern American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "chicken_fried_steak"
  },
  {
    "Food": "Potato Salad",
    "Category": "Southern American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "potato_salad"
  },
  {
    "Food": "Chicken and Dumplings",
    "Category": "Southern American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "chicken_dumplings"
  },
  {
    "Food": "Southern Fish Fry",
    "Category": "Southern American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "southern_fish_fry"
  },
  {
    "Food": "Cornbread",
    "Category": "Southern American",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "cornbread"
  },
  {
    "Food": "Shrimp and Grits",
    "Category": "Southern American",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "shrimp_and_grits"
  },
  {
    "Food": "Mushroom Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "mushroom_pizza"
  },
  {
    "Food": "Pepperoni Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "pepperoni_pizza"
  },
  {
    "Food": "Sausage Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "sausage_pizza"
  },
  {
    "Food": "Cheese Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "cheese_pizza"
  },
  {
    "Food": "Pineapple Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "pineapple_pizza"
  },
  {
    "Food": "Deep Dish Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "deep_dish_pizza"
  },
  {
    "Food": "Margherita Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "margherita_pizza"
  },
  {
    "Food": "Greek Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad",
+   "drawable": "greek_pizza"
  },
  {
    "Food": "White Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Bad",
+   "drawable": "white_pizza"
  },
  {
    "Food": "Neopolitan Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "neopolitan_pizza"
  },
  {
    "Food": "Hawaiian Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "hawaiian_pizza"
  },
  {
    "Food": "BBQ Chicken and Onion Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "bbq_chicken_onion_pizza"
  },
  {
    "Food": "Artichoke and Spinach Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "artichoke_spinach_pizza"
  },
  {
    "Food": "Bacon Pizza",
    "Category": "Pizza",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Bad"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Bad",
+   "drawable": "bacon_pizza"
  },
  {
    "Food": "Lamb Gyro",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good/Bad"
+   "Good or Bad": "Bad",
+   "drawable": "lamb_gyro"
  },
  {
    "Food": "Chicken Gyro",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good/Bad"
+   "Good or Bad": "Good",
+   "drawable": "chicken_gyro"
  },
  {
    "Food": "Lamb Kabob",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "lamb_kabob"
  },
  {
    "Food": "Hummus",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "hummus"
  },
  {
    "Food": "Falafel Sandwich",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "falafel_sandwich"
  },
  {
    "Food": "Dolmathes (Stuffed Grape Leaves)",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "dolmathes"
  },
  {
    "Food": "Greek Salad",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Pricey or Casual": "Casual",
+   "Good or Bad": "Good",
+   "drawable": "greek_salad"
  },
  {
    "Food": "Tiropites (Cheese Pastry)",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "tiropites"
  },
  {
    "Food": "Tzatziki with Pita Bread",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "tzatziki_with_pita_bread"
  },
  {
    "Food": "Spanakopita (Spinach Pastry)",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual",
-   "Good or Bad": "Bad"
+   "Good or Bad": "Bad",
+   "drawable": "spanakopita"
  },
  {
    "Food": "Pork Souvlaki (Grilled Pork Skewers)",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "pork_souvlaki"
  },
  {
    "Food": "Stuffed Tomatoes",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Good or Bad": "Good",
+   "drawable": "stuffed_tomatoes"
  },
  {
    "Food": "Roasted Stuffed Bell Peppers",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good",
+   "drawable": "roasted_stuffed_bell_peppers"
  },
  {
    "Food": "Grilled Lamb Chops",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
    "Pricey or Casual": "Fancy",
-   "Good or Bad": "Good/Bad"
+   "Good or Bad": "Bad",
+   "drawable": "grilled_lamb_chops"
  },
  {
    "Food": "Mediterranean Roasted Vegetables",
    "Category": "Greek",
    "Sweet or Savory": "Savory",
-   "Pricey or Casual": "Casual/Fancy",
-   "Good or Bad": "Good"
+   "Pricey or Casual": "Fancy",
+   "Good or Bad": "Good",
+   "drawable": "mediterranean_roasted_vegetables"
  }
 ]

@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
+import android.media.Image;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -97,8 +99,27 @@ public class inOutActivity extends AppCompatActivity {
         i = update;
 
         if (i==0){
-            RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
-            foodData.addAll(realm.copyFromRealm(all));
+//            RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
+//            foodData.addAll(realm.copyFromRealm(all));
+
+//            ArrayList<FoodRealm> assignImages (ArrayList<FoodRealm> list){
+//                realm.executeTransaction(new Realm.Transaction(){
+//                    @Override
+//                    public void execute(Realm realm){
+//                        for (int i = 0; i < foodData.size(); i++) {
+//                            int drawableId = getResources().getIdentifier(foodData.get(i).getDrawable(), "drawable", getPackageName());
+//                            Drawable drawable = getResources().getDrawable(drawableId);
+//                            BitmapDrawable image = ((BitmapDrawable) drawable);
+//                            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//                            image.getBitmap().compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//                            byte[] imageInByte = baos.toByteArray();
+//
+//                            foodData.get(i).setFoodImage(imageInByte);
+//                            realm.copyToRealm(foodData.get(i));
+//                        }
+//                        finish();
+//                    }
+                //});
         }
 
 
@@ -193,7 +214,7 @@ public class inOutActivity extends AppCompatActivity {
         ArrayList<FoodRealm> available = new ArrayList<>();
         if (attr == 1){
             for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getGoodOrBad() == filter){
+                if (list.get(i).getGoodOrBad() != filter){
                     available.remove(list.get(i));
                 }
             }
@@ -250,15 +271,5 @@ public class inOutActivity extends AppCompatActivity {
         super.onDestroy();
         realm.close();
     }
-//    ArrayList<Food> assignImages (ArrayList<Food> list){
-//        for (int i = 0; i < list.size(); i++) {
-//            int drawableId = getResources().getIdentifier(list.get(i).getName(), "drawable", getPackageName());
-//            Drawable image = getResources().getDrawable(drawableId);
-//            Bitmap newImage = ((BitmapDrawable) image).getBitmap();
-//
-//            list.get(i).setFoodImage(newImage);
-//        }
-//
-//        return list;
-//    }
+
 }

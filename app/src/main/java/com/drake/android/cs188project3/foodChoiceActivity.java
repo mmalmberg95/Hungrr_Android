@@ -3,6 +3,8 @@ package com.drake.android.cs188project3;
 import android.content.Intent;
 import android.graphics.Bitmap;
 
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -72,7 +75,7 @@ public class foodChoiceActivity extends AppCompatActivity {
         //First choice in game
         if (round == 1){
             RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
-            foodData.addAll(realm.copyFromRealm(all));
+            foodData.addAll(all);
 
             Opt1 = pull_random(foodData);
             Opt2 = pull_random(foodData);
@@ -86,8 +89,8 @@ public class foodChoiceActivity extends AppCompatActivity {
             }
 
 
-            pictureView(Opt1, foodOne);
-            pictureView(Opt2, foodTwo);
+//            pictureView(Opt1, foodOne);
+//            pictureView(Opt2, foodTwo);
         }
 
         //last choice in game
@@ -99,8 +102,8 @@ public class foodChoiceActivity extends AppCompatActivity {
             type = findString(number);
             Opt2 = pull_last(foodData, type);
 
-            pictureView(Opt1, foodOne);
-            pictureView(Opt2, foodTwo);
+//            pictureView(Opt1, foodOne);
+//            pictureView(Opt2, foodTwo);
 
             previous.clear();
             results.clear();
@@ -114,8 +117,8 @@ public class foodChoiceActivity extends AppCompatActivity {
             checkSame(Opt1, Opt2, foodData);
             Opt2 = checkType(type, previous, foodData, Opt2);
 
-            pictureView(Opt1, foodOne);
-            pictureView(Opt2, foodTwo);
+//            pictureView(Opt1, foodOne);
+//            pictureView(Opt2, foodTwo);
 
         }
 
@@ -177,12 +180,13 @@ public class foodChoiceActivity extends AppCompatActivity {
 
 
 
-    void pictureView (FoodRealm item,  ImageButton food) {
-        //int id = getResources().getIdentifier(list.get(i).getName(), "drawable", getPackageName());
-        Bitmap Img = item.getFoodImage();
-        food.setImageBitmap(Img);
-        //include textview assignment
-    }
+//    void pictureView (FoodRealm item,  ImageButton food) {
+//        byte[] image = item.getFoodImage();
+//        BitmapFactory.Options options = new BitmapFactory.Options();
+//        Bitmap bitmap = BitmapFactory.decodeByteArray(image, 0, image.length);
+//        food.setImageBitmap(bitmap);
+//
+//    }
 
 
     //Pulls a random food object from the availble list of foods
@@ -329,20 +333,10 @@ public class foodChoiceActivity extends AppCompatActivity {
         return index;
     }
 
-
-    //    PanAsian = 0
-//    Mexican = 1
-//    Italian = 2
-//    American = 3
-//    Seafood = 4
-//    Southern = 5
-//    Pizza = 6
-//    Greek = 7
-//    currently: One Array: Pull random to start, loop to find next list
-
-//    Questions? Which version?
-//                Random Function?
-//                Get index from max value in array?
-//                Thread Timer?
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        realm.close();
+    }
 
 }
