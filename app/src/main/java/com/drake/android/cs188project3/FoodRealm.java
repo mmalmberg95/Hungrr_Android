@@ -1,5 +1,6 @@
 package com.drake.android.cs188project3;
 
+import io.realm.RealmList;
 import io.realm.RealmObject;
 
 /**
@@ -12,6 +13,8 @@ public class FoodRealm extends RealmObject {
     private String SweetOrSavory;
     private String PriceyOrCasual;
     private String GoodOrBad;
+    private RealmList<FoodRealm> foodData;
+    private RealmList<FoodRealm> available;
 
     public String getFood() {
         return Food;
@@ -51,5 +54,21 @@ public class FoodRealm extends RealmObject {
 
     public void setGoodOrBad(String goodOrBad) {
         GoodOrBad = goodOrBad;
+    }
+
+    public RealmList<FoodRealm> getFoodData() {
+        return foodData;
+    }
+
+    public void setFoodData(RealmList<FoodRealm> foodData) {
+        this.foodData = foodData;
+    }
+
+    public RealmList<FoodRealm> getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(RealmList<FoodRealm> available) {
+        this.available = available;
     }
 }

@@ -19,6 +19,9 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
+import io.realm.Realm;
+import io.realm.RealmResults;
+
 
 public class inOutActivity extends AppCompatActivity {
 
@@ -32,47 +35,58 @@ public class inOutActivity extends AppCompatActivity {
     private String[] chosen1 = {"goodchosen", "casualchosen", "sweetchosen"}; //Jedi
     private String[] chosen2 = {"badchosen", "fancychosen", "savorychosen"};
     private int i;
-    private ArrayList<Food> foodData = new ArrayList<>();
+    private ArrayList<FoodRealm> foodData = new ArrayList<>();
+    private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_out);
 
+
+        //RealmResults<FoodRealm> available = new RealmResults<FoodRealm>();
+
         optOne = (ImageButton) findViewById(R.id.optOne);
         optTwo = (ImageButton) findViewById(R.id.optTwo);
 
-        InputStream is = getResources().openRawResource(R.raw.food_spreadsheet);
+        realm = Realm.getDefaultInstance();
+        //ArrayList<FoodRealm> foodData =
 
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(is, Charset.forName("UTF-8"))
-        );
 
-        //loop to read file
-        String line = "";
-        try {
-            reader.readLine();
-            while ((line = reader.readLine()) != null) {
-                //split by comma
-                //info is a just a identifier for the different splits
-                String[] info = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
+//        RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
+//        foodData.addAll(realm.copyFromRealm(all));
 
-                Food data = new Food();
-                data.setName(info[0]);
-                data.setType(Integer.parseInt(info[1]));
-                data.setTaste((info[2]));
-                data.setPrice(info[3]);
-                data.setHealth(info[4]);
-
-                foodData.add(data);
-
-            }
-
-        } catch (IOException e) {
-            //wtf = What a Terrible Failure
-            Log.wtf("OptionsList", "Error reading file at line " + line, e);
-            e.printStackTrace();
-        }
+//        InputStream is = getResources().openRawResource(R.raw.food_spreadsheet);
+//
+//        BufferedReader reader = new BufferedReader(
+//                new InputStreamReader(is, Charset.forName("UTF-8"))
+//        );
+//
+//        //loop to read file
+//        String line = "";
+//        try {
+//            reader.readLine();
+//            while ((line = reader.readLine()) != null) {
+//                //split by comma
+//                //info is a just a identifier for the different splits
+//                String[] info = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
+//
+//                Food data = new Food();
+//                data.setName(info[0]);
+//                data.setType(Integer.parseInt(info[1]));
+//                data.setTaste((info[2]));
+//                data.setPrice(info[3]);
+//                data.setHealth(info[4]);
+//
+//                foodData.add(data);
+//
+//            }
+//
+//        } catch (IOException e) {
+//            //wtf = What a Terrible Failure
+//            Log.wtf("OptionsList", "Error reading file at line " + line, e);
+//            e.printStackTrace();
+//        }
 
 //        assignImages(foodData);
 
@@ -81,6 +95,11 @@ public class inOutActivity extends AppCompatActivity {
         int update = myIntent.getIntExtra("update", 0);
 
         i = update;
+
+        if (i==0){
+            RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
+            foodData.addAll(realm.copyFromRealm(all));
+        }
 
 
         int Img1 = getResources().getIdentifier(options[i], "drawable", getPackageName());
@@ -109,13 +128,6 @@ public class inOutActivity extends AppCompatActivity {
                 filter(foodData, i, choice);
                 //((TransitionDrawable) optOne.getDrawable()).startTransition(500);
 
-                if (i == 3) {
-
-                    startActivity(j);
-                }
-//                else{startActivity(intent);
-//              }
-
                 Thread timer = new Thread(){
                     public void run() {
                         try{
@@ -124,8 +136,13 @@ public class inOutActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         finally {
-                            startActivity(intent);
-                            finish();
+                            if (i==3){
+                                startActivity(j);
+                            }
+                            else{
+                                startActivity(intent);
+                                finish();
+                            }
                         }
                     }
                 };
@@ -136,10 +153,6 @@ public class inOutActivity extends AppCompatActivity {
         optTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //i++;
-                // MATT MATT MATT MATT MATT MATT I'M NOT SURE WHAT THIS WAS FOR, I DO NOT WANT
-                // BREAK IT. WAS CAUSING PROBLEMS WITH THE STRING ARRAYS FOR CHOSEN OPTIONS.
-                // PLEASE CONFIRM IT STILL SERVES INITIAL PURPOSE
 
                 int Img2 = getResources().getIdentifier(chosen2[i-1], "drawable", getPackageName());
                 optTwo.setImageResource(Img2);
@@ -148,11 +161,6 @@ public class inOutActivity extends AppCompatActivity {
                 String choice = setup(i);
                 filter(foodData, i, choice);
 
-                if (i == 3) {
-                    startActivity(j);
-                }
-//                else{startActivity(intent);
-//              }
 
                 Thread timer = new Thread(){
                     public void run() {
@@ -162,8 +170,13 @@ public class inOutActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         finally {
-                            startActivity(intent);
-                            finish();
+                            if (i==3){
+                                startActivity(j);
+                            }
+                            else{
+                                startActivity(intent);
+                                finish();
+                            }
                         }
                     }
                 };
@@ -172,40 +185,16 @@ public class inOutActivity extends AppCompatActivity {
         });
 
         mHandler = new Handler();
-        startRepeatingTask();
     }
 
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        stopRepeatingTask();
-    }
 
-    Runnable mStatusChecker = new Runnable() {
-        @Override
-        public void run() {
-            try{
-               // updateStatus();
-            } finally {
-                mHandler.postDelayed(mStatusChecker, mInterval);
-            }
-        }
-    };
 
-    void startRepeatingTask(){
-        mStatusChecker.run();
-    }
-
-    void stopRepeatingTask(){
-        mHandler.removeCallbacks(mStatusChecker);
-    }
-
-    ArrayList<Food> filter (ArrayList<Food> list, int attr, String filter){
-        ArrayList<Food> available = new ArrayList<>();
+    ArrayList<FoodRealm> filter (ArrayList<FoodRealm> list, int attr, String filter){
+        ArrayList<FoodRealm> available = new ArrayList<>();
         if (attr == 1){
             for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getHealth() == filter){
-                    available.add(list.get(i));
+                if (list.get(i).getGoodOrBad() == filter){
+                    available.remove(list.get(i));
                 }
             }
             return available;
@@ -213,8 +202,8 @@ public class inOutActivity extends AppCompatActivity {
 
         else if(attr == 2){
             for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getPrice() == filter){
-                    available.add(list.get(i));
+                if (list.get(i).getPriceyOrCasual() == filter){
+                    available.remove(list.get(i));
                 }
             }
             return available;
@@ -222,8 +211,8 @@ public class inOutActivity extends AppCompatActivity {
 
         else if(attr == 3) {
             for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getTaste() == filter){
-                    available.add(list.get(i));
+                if (list.get(i).getSweetOrSavory() == filter){
+                    available.remove(list.get(i));
                 }
             }
             return available;
@@ -255,6 +244,12 @@ public class inOutActivity extends AppCompatActivity {
         return choice;
     }
 //
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        realm.close();
+    }
 //    ArrayList<Food> assignImages (ArrayList<Food> list){
 //        for (int i = 0; i < list.size(); i++) {
 //            int drawableId = getResources().getIdentifier(list.get(i).getName(), "drawable", getPackageName());

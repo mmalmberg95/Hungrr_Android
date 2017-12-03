@@ -26,13 +26,15 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
+import io.realm.Realm;
+import io.realm.RealmResults;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView welcomeTxt;
     private TextView introTxt;
     private ImageButton playButton;
-
 
 
     @Override
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         welcomeTxt = (TextView) findViewById(R.id.welcomeTxt);
         introTxt = (TextView) findViewById(R.id.introTxt);
         playButton = (ImageButton) findViewById(R.id.playButton);
+
 
         //Theming the word 'TWO' to orange text
         Spannable wordToSpan = new SpannableString("You have TWO seconds to pick between two options on your quest to conquer your craving.");
