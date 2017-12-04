@@ -2,6 +2,7 @@ package com.drake.android.cs188project3;
 
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -26,13 +27,15 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 
+import io.realm.Realm;
+import io.realm.RealmResults;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView welcomeTxt;
     private TextView introTxt;
     private ImageButton playButton;
-
 
 
     @Override
@@ -50,8 +53,6 @@ public class MainActivity extends AppCompatActivity {
         introTxt.setText(wordToSpan);
 
 
-
-
         Animation one = AnimationUtils.loadAnimation(this, R.anim.first);
         Animation two = AnimationUtils.loadAnimation(this, R.anim.second);
         welcomeTxt.startAnimation(one);
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(),CountdownActivity.class);
+                Intent intent = new Intent(getBaseContext(), CountdownActivity.class);
                 startActivity(intent);
             }
         });

@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
+import android.media.Image;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,11 +15,15 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+
+import io.realm.Realm;
+import io.realm.RealmResults;
 
 
 public class inOutActivity extends AppCompatActivity {
@@ -32,8 +37,11 @@ public class inOutActivity extends AppCompatActivity {
     private ImageButton optTwo;
     private String[] options = {"good", "casual", "sweet"};
     private String[] options2 = {"bad", "fancy", "savory"};
+    private String[] chosen1 = {"goodchosen", "casualchosen", "sweetchosen"}; //Jedi
+    private String[] chosen2 = {"badchosen", "fancychosen", "savorychosen"};
     private int i;
-    private ArrayList<Food> foodData = new ArrayList<>();
+    private ArrayList<FoodRealm> foodData = new ArrayList<>();
+    private Realm realm;
 
 
     @Override
@@ -41,42 +49,17 @@ public class inOutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_in_out);
 
+
+
         optOne = (ImageButton) findViewById(R.id.optOne);
         optTwo = (ImageButton) findViewById(R.id.optTwo);
 
-        InputStream is = getResources().openRawResource(R.raw.food_spreadsheet);
+//        realm = Realm.getDefaultInstance();
+//        RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
+//        foodData.addAll(realm.copyFromRealm(all));
 
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(is, Charset.forName("UTF-8"))
-        );
 
-        //loop to read file
-        String line = "";
-        try {
-            reader.readLine();
-            while ((line = reader.readLine()) != null) {
-                //split by comma
-                //info is a just a identifier for the different splits
-                String[] info = line.split(",(?=([^\"]*\"[^\"]*\")*[^\"]*$)");
-
-                Food data = new Food();
-                data.setName(info[0]);
-                data.setType(Integer.parseInt(info[1]));
-                data.setTaste((info[2]));
-                data.setPrice(info[3]);
-                data.setHealth(info[4]);
-
-                foodData.add(data);
-
-            }
-
-        } catch (IOException e) {
-            //wtf = What a Terrible Failure
-            Log.wtf("OptionsList", "Error reading file at line " + line, e);
-            e.printStackTrace();
-        }
-
-        assignImages(foodData);
+//        assignImages(foodData);
 
 
         Intent myIntent = getIntent();
@@ -84,12 +67,40 @@ public class inOutActivity extends AppCompatActivity {
 
         i = update;
 
+        //If opening round, pull down all available data and assign images to it to
+        // manipulate later.
+        if (i==0){
+//            RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
+//            foodData.addAll(realm.copyFromRealm(all));
+
+//            ArrayList<FoodRealm> assignImages (ArrayList<FoodRealm> list){
+//                realm.executeTransaction(new Realm.Transaction(){
+//                    @Override
+//                    public void execute(Realm realm){
+//                        for (int i = 0; i < foodData.size(); i++) {
+//                            int drawableId = getResources().getIdentifier(foodData.get(i).getDrawable(), "drawable", getPackageName());
+//                            Drawable drawable = getResources().getDrawable(drawableId);
+//                            BitmapDrawable image = ((BitmapDrawable) drawable);
+//                            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//                            image.getBitmap().compress(Bitmap.CompressFormat.JPEG, 100, baos);
+//                            byte[] imageInByte = baos.toByteArray();
+//
+//                            foodData.get(i).setFoodImage(imageInByte);
+//                            realm.copyToRealm(foodData.get(i));
+//                        }
+//                        finish();
+//                    }
+                //});
+        }
+
 
         int Img1 = getResources().getIdentifier(options[i], "drawable", getPackageName());
         optOne.setImageResource(Img1);
 
         int Img2 = getResources().getIdentifier(options2[i], "drawable", getPackageName());
         optTwo.setImageResource(Img2);
+
+
 
         i++;
 
@@ -102,31 +113,69 @@ public class inOutActivity extends AppCompatActivity {
         optOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int Img1 = getResources().getIdentifier(chosen1[i-1], "drawable", getPackageName());
+                optOne.setImageResource(Img1);
 
                 String choice = setup(i);
-                filter(foodData, i, choice);
-                //((TransitionDrawable) optOne.getDrawable()).startTransition(500);
+                intent.putExtra("choice", choice);
+//                filter(foodData, i, choice);
 
-                if (i == 3) {
-
-                    startActivity(j);
-                }
-                else{startActivity(intent);}
-
+                //Changes Background of image to show selection
+                Thread timer = new Thread(){
+                    public void run() {
+                        try{
+                            sleep(50);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        finally {
+                            if (i==3){
+                                startActivity(j);
+                            }
+                            else{
+                                startActivity(intent);
+                                finish();
+                            }
+                        }
+                    }
+                };
+                timer.start();
             }
         });
 
         optTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                i++;
-                String choice = setup(i);
-                filter(foodData, i, choice);
 
-                if (i == 3) {
-                    startActivity(j);
-                }
-                else{startActivity(intent);}
+                int Img2 = getResources().getIdentifier(chosen2[i-1], "drawable", getPackageName());
+                optTwo.setImageResource(Img2);
+
+                //filters the available data based on the choice
+                String choice = setup(i);
+                intent.putExtra("choice", choice);
+
+//                filter(foodData, i, choice);
+
+                //changes background of image to show selection
+                Thread timer = new Thread(){
+                    public void run() {
+                        try{
+                            sleep(50);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        finally {
+                            if (i==3){
+                                startActivity(j);
+                            }
+                            else{
+                                startActivity(intent);
+                                finish();
+                            }
+                        }
+                    }
+                };
+                timer.start();
             }
         });
 
@@ -151,37 +200,42 @@ public class inOutActivity extends AppCompatActivity {
             }
         }, 3000);
       
-    ArrayList<Food> filter (ArrayList<Food> list, int attr, String filter){
-        ArrayList<Food> available = new ArrayList<>();
-        if (attr == 1){
-            for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getHealth() == filter){
-                    available.add(list.get(i));
-                }
-            }
-            return available;
-        }
 
-        else if(attr == 2){
-            for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getPrice() == filter){
-                    available.add(list.get(i));
-                }
-            }
-            return available;
-        }
+    //filters the available data by removing the data that doesn't fit the description
+//    ArrayList<FoodRealm> filter (ArrayList<FoodRealm> list, int attr, String filter){
+//        ArrayList<FoodRealm> available = new ArrayList<>();
+//        if (attr == 1){
+//            for (int i = 0; i < list.size(); i++){
+//                if (list.get(i).getGoodOrBad() == filter){
+//                    available.add(list.get(i));
+//                }
+//            }
+//            return available;
+//        }
+//
+//        else if(attr == 2){
+//            for (int i = 0; i < list.size(); i++){
+//                if (list.get(i).getPriceyOrCasual() == filter){
+//                    available.add(list.get(i));
+//                }
+//            }
+//            return available;
+//        }
+//
+//        else if(attr == 3) {
+//            for (int i = 0; i < list.size(); i++){
+//                if (list.get(i).getSweetOrSavory() == filter){
+//                    available.add(list.get(i));
+//                }
+//            }
+//            return available;
+//        }
+//
+//
+//        return available;
+//    }
 
-        else if(attr == 3) {
-            for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getTaste() == filter){
-                    available.add(list.get(i));
-                }
-            }
-            return available;
-        }
-        return available;
-    }
-
+    //Translates integers to strings
     String setup (int n){
         String choice = "null";
         if ( i == 1){
@@ -206,16 +260,11 @@ public class inOutActivity extends AppCompatActivity {
         return choice;
     }
 
-    ArrayList<Food> assignImages (ArrayList<Food> list){
-        for (int i = 0; i < list.size(); i++) {
-            int drawableId = getResources().getIdentifier(list.get(i).getName(), "drawable", getPackageName());
-            Drawable image = getResources().getDrawable(drawableId);
-            Bitmap newImage = ((BitmapDrawable) image).getBitmap();
 
-            list.get(i).setFoodImage(newImage);
-        }
-
-        return list;
-    }
+//    @Override
+//    protected void onDestroy(){
+//        super.onDestroy();
+//        realm.close();
+//    }
 
 }
