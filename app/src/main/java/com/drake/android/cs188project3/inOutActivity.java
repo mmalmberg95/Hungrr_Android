@@ -1,5 +1,6 @@
 package com.drake.android.cs188project3;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -22,6 +23,8 @@ import java.util.ArrayList;
 
 public class inOutActivity extends AppCompatActivity {
 
+    private Context context;
+  
     private Handler mHandler;
     private int mInterval = 2000;
 
@@ -31,6 +34,7 @@ public class inOutActivity extends AppCompatActivity {
     private String[] options2 = {"bad", "fancy", "savory"};
     private int i;
     private ArrayList<Food> foodData = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +96,7 @@ public class inOutActivity extends AppCompatActivity {
         final Intent intent = getIntent();
         intent.putExtra("update", i);
 
-
+        context = this;
         final Intent j = new Intent(this, breakTimeActivity.class);
       
         optOne.setOnClickListener(new View.OnClickListener() {
@@ -126,35 +130,27 @@ public class inOutActivity extends AppCompatActivity {
             }
         });
 
-        mHandler = new Handler();
-        startRepeatingTask();
+
+        switchTimer();
     }
 
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        stopRepeatingTask();
-    }
-
-    Runnable mStatusChecker = new Runnable() {
-        @Override
-        public void run() {
-            try{
-               // updateStatus();
-            } finally {
-                mHandler.postDelayed(mStatusChecker, mInterval);
+    public void switchTimer(){
+        Handler mHandler = new Handler();
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //insert results
+                if (i == 3) {
+                    final Intent j = new Intent(context, foodChoiceActivity.class);
+                    startActivity(j);
+                }
+                else{
+                    final Intent intent = getIntent();
+                    intent.putExtra("update", i);
+                    startActivity(intent);}
             }
-        }
-    };
-
-    void startRepeatingTask(){
-        mStatusChecker.run();
-    }
-
-    void stopRepeatingTask(){
-        mHandler.removeCallbacks(mStatusChecker);
-    }
-
+        }, 3000);
+      
     ArrayList<Food> filter (ArrayList<Food> list, int attr, String filter){
         ArrayList<Food> available = new ArrayList<>();
         if (attr == 1){
@@ -221,4 +217,5 @@ public class inOutActivity extends AppCompatActivity {
 
         return list;
     }
+
 }
