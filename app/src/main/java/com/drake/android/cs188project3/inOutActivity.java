@@ -46,14 +46,13 @@ public class inOutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_in_out);
 
 
-        //RealmResults<FoodRealm> available = new RealmResults<FoodRealm>();
 
         optOne = (ImageButton) findViewById(R.id.optOne);
         optTwo = (ImageButton) findViewById(R.id.optTwo);
 
-        realm = Realm.getDefaultInstance();
-        RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
-        foodData.addAll(realm.copyFromRealm(all));
+//        realm = Realm.getDefaultInstance();
+//        RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
+//        foodData.addAll(realm.copyFromRealm(all));
 
 
 //        assignImages(foodData);
@@ -114,7 +113,8 @@ public class inOutActivity extends AppCompatActivity {
                 optOne.setImageResource(Img1);
 
                 String choice = setup(i);
-                filter(foodData, i, choice);
+                intent.putExtra("choice", choice);
+//                filter(foodData, i, choice);
 
                 //Changes Background of image to show selection
                 Thread timer = new Thread(){
@@ -148,7 +148,9 @@ public class inOutActivity extends AppCompatActivity {
 
                 //filters the available data based on the choice
                 String choice = setup(i);
-                filter(foodData, i, choice);
+                intent.putExtra("choice", choice);
+
+//                filter(foodData, i, choice);
 
                 //changes background of image to show selection
                 Thread timer = new Thread(){
@@ -173,41 +175,42 @@ public class inOutActivity extends AppCompatActivity {
             }
         });
 
-        mHandler = new Handler();
     }
 
 
     //filters the available data by removing the data that doesn't fit the description
-    ArrayList<FoodRealm> filter (ArrayList<FoodRealm> list, int attr, String filter){
-        ArrayList<FoodRealm> available = new ArrayList<>();
-        if (attr == 1){
-            for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getGoodOrBad() == filter){
-                    available.add(list.get(i));
-                }
-            }
-            return available;
-        }
-
-        else if(attr == 2){
-            for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getPriceyOrCasual() == filter){
-                    available.add(list.get(i));
-                }
-            }
-            return available;
-        }
-
-        else if(attr == 3) {
-            for (int i = 0; i < list.size(); i++){
-                if (list.get(i).getSweetOrSavory() == filter){
-                    available.add(list.get(i));
-                }
-            }
-            return available;
-        }
-        return available;
-    }
+//    ArrayList<FoodRealm> filter (ArrayList<FoodRealm> list, int attr, String filter){
+//        ArrayList<FoodRealm> available = new ArrayList<>();
+//        if (attr == 1){
+//            for (int i = 0; i < list.size(); i++){
+//                if (list.get(i).getGoodOrBad() == filter){
+//                    available.add(list.get(i));
+//                }
+//            }
+//            return available;
+//        }
+//
+//        else if(attr == 2){
+//            for (int i = 0; i < list.size(); i++){
+//                if (list.get(i).getPriceyOrCasual() == filter){
+//                    available.add(list.get(i));
+//                }
+//            }
+//            return available;
+//        }
+//
+//        else if(attr == 3) {
+//            for (int i = 0; i < list.size(); i++){
+//                if (list.get(i).getSweetOrSavory() == filter){
+//                    available.add(list.get(i));
+//                }
+//            }
+//            return available;
+//        }
+//
+//
+//        return available;
+//    }
 
     //Translates integers to strings
     String setup (int n){
@@ -235,10 +238,10 @@ public class inOutActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onDestroy(){
-        super.onDestroy();
-        realm.close();
-    }
+//    @Override
+//    protected void onDestroy(){
+//        super.onDestroy();
+//        realm.close();
+//    }
 
 }

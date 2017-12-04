@@ -2,6 +2,7 @@ package com.drake.android.cs188project3;
 
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
@@ -46,13 +47,10 @@ public class MainActivity extends AppCompatActivity {
         introTxt = (TextView) findViewById(R.id.introTxt);
         playButton = (ImageButton) findViewById(R.id.playButton);
 
-
         //Theming the word 'TWO' to orange text
         Spannable wordToSpan = new SpannableString("You have TWO seconds to pick between two options on your quest to conquer your craving.");
         wordToSpan.setSpan(new ForegroundColorSpan(Color.argb(255, 213, 103, 42)), 9, 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         introTxt.setText(wordToSpan);
-
-
 
 
         Animation one = AnimationUtils.loadAnimation(this, R.anim.first);
@@ -64,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getBaseContext(),CountdownActivity.class);
+                Intent intent = new Intent(getBaseContext(), CountdownActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,6 +1,7 @@
 package com.drake.android.cs188project3;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 
 import android.graphics.BitmapFactory;
@@ -20,10 +21,13 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Array;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Random;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
+
+import static java.lang.Boolean.TRUE;
 
 public class foodChoiceActivity extends AppCompatActivity {
 
@@ -38,10 +42,6 @@ public class foodChoiceActivity extends AppCompatActivity {
 
     //Put all in Realm
     private ArrayList<FoodRealm> foodData;
-    private ArrayList<FoodRealm> lastData;
-    private ArrayList<Integer> results;
-    private ArrayList<String> previous;
-
 
 //    PanAsian = 0
 //    Mexican = 1
@@ -63,6 +63,15 @@ public class foodChoiceActivity extends AppCompatActivity {
 
         realm = Realm.getDefaultInstance();
 
+        RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
+        foodData.addAll(realm.copyFromRealm(all));
+
+        final SharedPreferences used = getApplicationContext().getSharedPreferences("usedPref", 0);
+        final SharedPreferences.Editor editor = used.edit();
+
+        final SharedPreferences results = getApplicationContext().getSharedPreferences("resultsPref", 0);
+        final SharedPreferences.Editor resultsEdit = results.edit();
+
 
         //gets the number round of the game
         Intent myIntent = getIntent();
@@ -71,10 +80,11 @@ public class foodChoiceActivity extends AppCompatActivity {
 
 
 
+
         //First choice in game
         if (round == 1){
-            RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
-            foodData.addAll(all);
+//            RealmResults<FoodRealm> all = realm.where(FoodRealm.class).findAll();
+//            foodData.addAll(all);
 
             //pulls two random options from the data set
             Opt1 = pull_random(foodData);
@@ -85,9 +95,26 @@ public class foodChoiceActivity extends AppCompatActivity {
 
             //Initializes the results array to update with count numbers
             //of each category
-            while (i < 6){
-                results.add(0);
-            }
+            resultsEdit.putInt("PanAsian", 0);
+            resultsEdit.putInt("Mexican", 0);
+            resultsEdit.putInt("Italian", 0);
+            resultsEdit.putInt("American", 0);
+            resultsEdit.putInt("Seafood", 0);
+            resultsEdit.putInt("Southern", 0);
+            resultsEdit.putInt("Pizza", 0);
+            resultsEdit.putInt("Greek", 0);
+            resultsEdit.commit();
+
+            editor.putString("PanAsian", "PanAsian");
+            editor.putString("Mexican", "Mexican");
+            editor.putString("Italian", "Italian");
+            editor.putString("American", "American");
+            editor.putString("Seafood", "Seafood");
+            editor.putString("Southern", "Southern");
+            editor.putString("Pizza", "Pizza");
+            editor.putString("Greek", "Greek");
+            editor.commit();
+
 
 
 //            pictureView(Opt1, foodOne);
@@ -97,21 +124,18 @@ public class foodChoiceActivity extends AppCompatActivity {
         //last choice in game
         else if(round == 10){
             //Gets the most chosen category and pulls from that category
-            int number = getMax(results);
-            type = findString(number);
+            type = getMax(results);
             Opt1 = pull_last(foodData, type);
 
             //Gets second most chosen category and pulls from that category
-            number = getMax(results);
-            type = findString(number);
+            type = getMax(results);
             Opt2 = pull_last(foodData, type);
 
 //            pictureView(Opt1, foodOne);
 //            pictureView(Opt2, foodTwo);
 
             //Resets results for next play of game
-            previous.clear();
-            results.clear();
+
         }
 
         //Every Round
@@ -125,7 +149,7 @@ public class foodChoiceActivity extends AppCompatActivity {
             //compares the two options
             checkSame(Opt1, Opt2, foodData);
             //Makes sure that the new category pulled hasn't been used before
-            Opt2 = checkType(type, previous, foodData, Opt2);
+            Opt2 = checkType(type, used, foodData, Opt2);
 
 //            pictureView(Opt1, foodOne);
 //            pictureView(Opt2, foodTwo);
@@ -142,21 +166,22 @@ public class foodChoiceActivity extends AppCompatActivity {
                 // future reference
                 String type = Opt1.getCategory();
                 final Intent intent = getIntent();
+                intent.putExtra("round", round);
                 intent.putExtra("type", type);
 
                 //updates the correct index of the results array
-                int category = findCategory(type);
-                int update = results.get(category);
-                update ++;
-                results.set(category, update);
+                int score = results.getInt(type, 0);
+                resultsEdit.putInt(type, score+1);
+                resultsEdit.commit();
 
                 //adds opposite category to the previous array so that
                 // the category wont get chosen again
-                String other = Opt2.getCategory();
-                previous.add(other);
+                editor.remove(type);
+                editor.commit();
 
                 //starts next activity based on where in the game we are
                 if (round == 10){
+                    next.putExtra("type", type);
                     startActivity(next);
                 }
                 else{
@@ -175,22 +200,22 @@ public class foodChoiceActivity extends AppCompatActivity {
                 // future reference
                 String type = Opt2.getCategory();
                 final Intent intent = getIntent();
+                intent.putExtra("round", round);
                 intent.putExtra("type", type);
 
                 //updates the correct index of the results array
-                int category = findCategory(type);
-                int update = results.get(category);
-                update ++;
-                results.set(category, update);
+                int score = results.getInt(type, 0);
+                resultsEdit.putInt(type, score+1);
+                resultsEdit.commit();
 
                 //adds opposite category to the previous array so that
                 // the category wont get chosen again
-                String other = Opt1.getCategory();
-                previous.add(other);
-
+                editor.remove(type);
+                editor.commit();
 
                 //starts next activity based on where in the game we are
                 if (round == 10){
+                    next.putExtra("type", type);
                     startActivity(next);
                 }
                 else{
@@ -231,7 +256,6 @@ public class foodChoiceActivity extends AppCompatActivity {
                 last.add(all.get(i));
             }
         }
-
         Random rand = new Random();
         int index = rand.nextInt(last.size());
 
@@ -251,33 +275,35 @@ public class foodChoiceActivity extends AppCompatActivity {
     }
 
     //Checks to see if the category of given food has been used before in the game
-    FoodRealm checkType(String type, ArrayList<String> used, ArrayList<FoodRealm> available,FoodRealm option){
-        if (used.size() == 8){
-            return option;
+    FoodRealm checkType(String type, SharedPreferences used, ArrayList<FoodRealm> available,FoodRealm option){
+        if (used.contains(type) == TRUE){
+//            Random rand = new Random();
+//            int index = rand.nextInt(7);
+//            //type = getString(index);
+            option = pull_random(available);
+            type = option.getCategory();
+            option = checkType(type, used, available, option);
         }
-        for (i = 0; i < used.size(); i++){
-            if (type == used.get(i)){
-                option = pull_random(available);
-                type = option.getCategory();
-                i = 0;
-            }
-        }
+
         return option;
     }
 
     //Finds the max value of teh results array, with the index
     // corresponding to the correct cuisine
-    Integer getMax (ArrayList<Integer> results){
+    String getMax (SharedPreferences results){
         int max = 0;
-        int index = 0;
-        for (i=0; i < results.size(); i++ ){
-            if (results.get(i) >= max ){
-                max = results.get(i);
-                index = i;
+        int value = 0;
+        String type = null;
+        Map<String, ?> scores = results.getAll();
+        for(Map.Entry<String, ?> entry : scores.entrySet()){
+            String key = entry.getKey();
+            value = results.getInt(key, 0);
+            if ( value > max ){
+                max = value;
+                type = key;
             }
         }
-        results.set(index, 0);
-        return index;
+        return type;
     }
 
     //Converts string name to index
