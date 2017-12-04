@@ -46,7 +46,7 @@ public class foodChoiceActivity extends AppCompatActivity {
     private Realm realm;
 
     //Put all in Realm
-    private ArrayList<FoodRealm> foodData;
+    private ArrayList<FoodRealm> foodData = new ArrayList();
 
 //    PanAsian = 0
 //    Mexican = 1
