@@ -183,7 +183,7 @@ public class inOutActivity extends AppCompatActivity {
         switchTimer();
     }
 
-    public void switchTimer(){
+    public void switchTimer() {
         Handler mHandler = new Handler();
         mHandler.postDelayed(new Runnable() {
             @Override
@@ -192,13 +192,14 @@ public class inOutActivity extends AppCompatActivity {
                 if (i == 3) {
                     final Intent j = new Intent(context, foodChoiceActivity.class);
                     startActivity(j);
-                }
-                else{
+                } else {
                     final Intent intent = getIntent();
                     intent.putExtra("update", i);
-                    startActivity(intent);}
+                    startActivity(intent);
+                }
             }
         }, 3000);
+    }
       
 
     //filters the available data by removing the data that doesn't fit the description

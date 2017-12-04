@@ -187,6 +187,10 @@ public class foodChoiceActivity extends AppCompatActivity {
 
                 //starts next activity based on where in the game we are
                 if (round == 10){
+                    editor.clear();
+                    editor.commit();
+                    resultsEdit.clear();
+                    resultsEdit.commit();
                     next.putExtra("type", type);
                     startActivity(next);
                 }
@@ -221,6 +225,10 @@ public class foodChoiceActivity extends AppCompatActivity {
 
                 //starts next activity based on where in the game we are
                 if (round == 10){
+                    editor.clear();
+                    editor.commit();
+                    resultsEdit.clear();
+                    resultsEdit.commit();
                     next.putExtra("type", type);
                     startActivity(next);
                 }
@@ -242,7 +250,7 @@ public class foodChoiceActivity extends AppCompatActivity {
                 //insert result
                  if (round == 10) {
                     final Intent j = new Intent(context, finalPage.class);
-                    j.putExtra("type", type);
+                    j.putExtra("type", Opt1.getCategory());
                     startActivity(j);
                 }
                 else{
