@@ -17,66 +17,79 @@
     <!--app:lottie_autoPlay="true"/>-->
 
 
+    <!--<ImageSwitcher-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/timerThree"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:srcCompat="@drawable/timerThree" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/timerTwo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:srcCompat="@drawable/timerTwo" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/timerOne"-->
+            <!--android:layout_width="300dp"-->
+            <!--android:layout_height="300dp"-->
+            <!--app:srcCompat="@drawable/timerOne" />-->
+    <!--</ImageSwitcher>-->
+
     <ViewFlipper
-        android:id="@+id/viewFlipper1"
-        android:layout_width="378dp"
-        android:layout_height="562dp"
+        android:id="@+id/imgFlipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:autoStart="true"
         android:flipInterval="1000"
         android:inAnimation="@android:anim/fade_in"
         android:outAnimation="@android:anim/fade_out"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="2dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/three_textview"
-            android:layout_width="378dp"
-            android:layout_height="562dp"
-            android:text="3"
-            android:textAlignment="center"
+
+        <ImageView
+            android:id="@+id/threeImg"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:gravity="center"
-            android:textSize="64sp"
-            android:textColor="#ffffff"
+            app:srcCompat="@drawable/timerthree"
             tools:layout_editor_absoluteX="165dp"
             tools:layout_editor_absoluteY="189dp" />
 
-        <TextView
-            android:id="@+id/two_textview"
-            android:layout_width="378dp"
-            android:layout_height="562dp"
-            android:text="2"
-            android:textAlignment="center"
+        <ImageView
+            android:id="@+id/twoImg"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:gravity="center"
-            android:textSize="64sp"
-            android:textColor="#ffffff"
+            app:srcCompat="@drawable/timertwo"
             tools:layout_editor_absoluteX="165dp"
             tools:layout_editor_absoluteY="189dp" />
 
-        <TextView
-            android:id="@+id/one_textview"
-            android:layout_width="378dp"
-            android:layout_height="562dp"
-            android:text="1"
-            android:textAlignment="center"
+        <ImageView
+            android:id="@+id/oneImg"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:gravity="center"
-            android:textSize="64sp"
-            android:textColor="#ffffff"
+            app:srcCompat="@drawable/timerone"
             tools:layout_editor_absoluteX="165dp"
             tools:layout_editor_absoluteY="189dp" />
 
-        <TextView
-            android:id="@+id/go_textview"
-            android:layout_width="378dp"
-            android:layout_height="562dp"
-            android:text="GO!"
-            android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="64sp"
-            android:textColor="#ffffff"
-            tools:layout_editor_absoluteX="165dp"
-            tools:layout_editor_absoluteY="189dp" />
-
-
+        <ImageView
+            android:id="@+id/goImg"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/go" />
     </ViewFlipper>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
 
 android {
     compileSdkVersion 26
@@ -26,8 +27,13 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
+    compile 'com.android.support:design:26.1.0'
     compile 'com.airbnb.android:lottie:2.2.5'
 
     testCompile 'junit:junit:4.12'
+    implementation 'com.android.support:design:27.0.1'
+}
+
+realm {
+    syncEnabled = true;
 }
