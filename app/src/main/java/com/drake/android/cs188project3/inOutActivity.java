@@ -1,5 +1,6 @@
 package com.drake.android.cs188project3;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -27,6 +28,8 @@ import io.realm.RealmResults;
 
 public class inOutActivity extends AppCompatActivity {
 
+    private Context context;
+  
     private Handler mHandler;
     private int mInterval = 2000;
 
@@ -39,6 +42,7 @@ public class inOutActivity extends AppCompatActivity {
     private int i;
     private ArrayList<FoodRealm> foodData = new ArrayList<>();
     private Realm realm;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,7 +107,7 @@ public class inOutActivity extends AppCompatActivity {
         final Intent intent = getIntent();
         intent.putExtra("update", i);
 
-
+        context = this;
         final Intent j = new Intent(this, breakTimeActivity.class);
       
         optOne.setOnClickListener(new View.OnClickListener() {
@@ -175,8 +179,27 @@ public class inOutActivity extends AppCompatActivity {
             }
         });
 
+
+        switchTimer();
     }
 
+    public void switchTimer(){
+        Handler mHandler = new Handler();
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //insert results
+                if (i == 3) {
+                    final Intent j = new Intent(context, foodChoiceActivity.class);
+                    startActivity(j);
+                }
+                else{
+                    final Intent intent = getIntent();
+                    intent.putExtra("update", i);
+                    startActivity(intent);}
+            }
+        }, 3000);
+      
 
     //filters the available data by removing the data that doesn't fit the description
 //    ArrayList<FoodRealm> filter (ArrayList<FoodRealm> list, int attr, String filter){

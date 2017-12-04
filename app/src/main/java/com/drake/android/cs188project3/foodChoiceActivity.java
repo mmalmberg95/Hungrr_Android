@@ -1,11 +1,16 @@
 package com.drake.android.cs188project3;
 
+import android.content.Context;
 import android.content.Intent;
+
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Handler;
+import android.graphics.Bitmap;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,7 +35,7 @@ import io.realm.RealmResults;
 import static java.lang.Boolean.TRUE;
 
 public class foodChoiceActivity extends AppCompatActivity {
-
+    private Context context;
     private ImageButton foodOne;
     private ImageButton foodTwo;
     FoodRealm Opt1 = new FoodRealm();
@@ -57,6 +62,7 @@ public class foodChoiceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_choice);
+        context = this;
 
         foodOne = (ImageButton) findViewById(R.id.foodOne);
         foodTwo = (ImageButton) findViewById(R.id.foodTwo);
@@ -224,6 +230,27 @@ public class foodChoiceActivity extends AppCompatActivity {
                 }
             }
         });
+
+        switchTimer();
+    }
+
+    public void switchTimer(){
+        Handler mHandler = new Handler();
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //insert result
+                 if (round == 10) {
+                    final Intent j = new Intent(context, finalPage.class);
+                    j.putExtra("type", type);
+                    startActivity(j);
+                }
+                else{
+                    final Intent intent = getIntent();
+                    intent.putExtra("round", round);
+                    startActivity(intent);}
+            }
+        }, 3000);
     }
 
 
